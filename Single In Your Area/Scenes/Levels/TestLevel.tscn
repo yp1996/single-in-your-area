@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/navpoint.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=4]
+
+[node name="TileMap" type="TileMap" index="0"]
+
+mode = 1
+tile_set = null
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+[node name="navpoint_container" type="Node2D" parent="." index="1"]
+
+script = ExtResource( 2 )
+
+[node name="navpoint" type="Sprite" parent="navpoint_container" index="0"]
+
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="navpoint_container/navpoint" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+
