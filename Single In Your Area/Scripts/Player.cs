@@ -3,12 +3,6 @@ using System;
 
 public class Player : KinematicBody2D
 {
-    // Member variables here, example:
-    // private int a = 2;
-    // private string b = "textvar";
-	const int walk_speed = 200;
-
-    Vector2 velocity;
 
     public override void _Ready()
     {
