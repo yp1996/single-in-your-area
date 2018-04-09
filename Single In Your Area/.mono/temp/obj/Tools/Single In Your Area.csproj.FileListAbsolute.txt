@@ -9,3 +9,8 @@ C:\Users\Yana\Documents\single-in-your-area\Single In Your Area\.mono\temp\bin\T
 C:\Users\Yana\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.csprojResolveAssemblyReference.cache
 C:\Users\Yana\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.dll
 C:\Users\Yana\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.pdb
+C:\Users\Vesta\Documents\single-in-your-area\Single In Your Area\.mono\temp\bin\Tools\Single In Your Area.dll
+C:\Users\Vesta\Documents\single-in-your-area\Single In Your Area\.mono\temp\bin\Tools\Single In Your Area.pdb
+C:\Users\Vesta\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.csprojResolveAssemblyReference.cache
+C:\Users\Vesta\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.dll
+C:\Users\Vesta\Documents\single-in-your-area\Single In Your Area\.mono\temp\obj\Tools\Single In Your Area.pdb

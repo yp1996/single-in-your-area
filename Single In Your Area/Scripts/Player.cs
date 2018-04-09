@@ -16,7 +16,7 @@ public class Player : KinematicBody2D
 	Direction currentDirection = Direction.Up;
 	Sprite sprite;
     NavPoint navPt;
-	Vector2 offset = new Vector2(10,30); // offset in order not to block the character by the nav arrow
+	Vector2 offset = new Vector2(0,30); // offset in order not to block the character by the nav arrow
 
     public override void _Ready()
     {
@@ -61,13 +61,13 @@ public class Player : KinematicBody2D
 				} else {
 					currentDirection = Direction.Left;
 				}
+		} else {
+			if (movePosition.y > 0) {
+				currentDirection = Direction.Up;
 			} else {
-				if (movePosition.y > 0) {
-					currentDirection = Direction.Up;
-				} else {
-					currentDirection = Direction.Down;
-				}
+				currentDirection = Direction.Down;
 			}
+		}
 		
 	}
 }

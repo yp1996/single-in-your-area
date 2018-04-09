@@ -45,3 +45,4 @@ one_shot = false
 autostart = false
 
 
+[editable path="Player"]
