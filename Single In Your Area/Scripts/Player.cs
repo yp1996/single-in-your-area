@@ -18,6 +18,8 @@ public class Player : KinematicBody2D
     NavPoint navPt;
 	Vector2 offset = new Vector2(0,30); // offset in order not to block the character by the nav arrow
 
+	StatManager statManager;
+	
     public override void _Ready()
     {
         GD.Print("HELLO THERE");
@@ -25,6 +27,7 @@ public class Player : KinematicBody2D
         // Initialization here
         navPt = (NavPoint)GetNode("../navpoint_container");
         sprite = (Sprite)GetNode("Sprite");
+		statManager = (StatManager) GetNode("/root/StatManager");
         
     }
 
@@ -51,6 +54,13 @@ public class Player : KinematicBody2D
 		}
 		
         MoveAndSlide((movePosition.Normalized()*walkSpeed));
+		int stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
+		if (stepsTaken > 0) {
+			statManager.IncrementStat("anxiety");
+		} else {
+			statManager.IncrementStat("anxiety", -1);
+		}
+		
 		
     }
 	

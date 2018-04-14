@@ -1,20 +1,58 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=2]
-[ext_resource path="res://Sprites/navpoint.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=4]
+[ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
+[ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=3]
+[ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileSets/TileSet.tres" type="TileSet" id=5]
+[ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=7]
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="World" type="Node2D" index="0"]
 
-mode = 1
-tile_set = null
+_sections_unfolded = [ "Cell", "Transform", "Z Index" ]
+
+[node name="YSort" type="YSort" parent="." index="0"]
+
+sort_enabled = true
+_sections_unfolded = [ "Sort", "Transform", "Z Index" ]
+
+[node name="navpoint_container" type="Node2D" parent="YSort" index="0"]
+
+editor/display_folded = true
+z_index = 6
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="navpoint" type="Sprite" parent="YSort/navpoint_container" index="0"]
+
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="YSort/navpoint_container/navpoint" index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Player" parent="YSort" index="1" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+z_index = 1
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
+
+[node name="TileMap" type="TileMap" parent="YSort" index="2"]
+
+mode = 0
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
 cell_tile_origin = 0
-cell_y_sort = false
+cell_y_sort = true
 cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
@@ -23,26 +61,75 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray(  )
+tile_data = PoolIntArray( 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform", "Z Index" ]
 
-[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+[node name="ForegroundTileMap" type="TileMap" parent="YSort" index="3"]
 
-[node name="navpoint_container" type="Node2D" parent="." index="1"]
+z_index = 3
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262154, 0, 0 )
+_sections_unfolded = [ "Cell", "Z Index" ]
 
-script = ExtResource( 2 )
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
-[node name="navpoint" type="Sprite" parent="navpoint_container" index="0"]
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" index="0"]
 
-[node name="Timer" type="Timer" parent="navpoint_container/navpoint" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 190.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect" ]
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 13.0
+margin_right = 190.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 7 )
 
 
-[editable path="Player"]

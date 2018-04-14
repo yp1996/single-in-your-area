@@ -51,9 +51,11 @@
   <ItemGroup>
     <Compile Include="ButtonPress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\LabelScript.cs" />
     <Compile Include="Scripts\NavPoint.cs" />
     <Compile Include="Scripts\NavPointFade.cs" />
     <Compile Include="Scripts\Player.cs" />
+    <Compile Include="Scripts\StatManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
