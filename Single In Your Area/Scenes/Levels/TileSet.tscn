@@ -9,6 +9,6 @@ sort_enabled = true
 [node name="Road1" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 

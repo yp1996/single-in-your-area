@@ -1,12 +1,20 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=3]
 [ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://TileSets/TileSet.tres" type="TileSet" id=5]
-[ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=6]
-[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=7]
+[ext_resource path="res://Shaders/SaturationControl.shader" type="Shader" id=6]
+[ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=7]
+[ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=8]
+[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=9]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 6 )
+shader_param/saturation = null
 
 [node name="World" type="Node2D" index="0"]
 
@@ -45,10 +53,10 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
 
 [node name="TileMap" type="TileMap" parent="YSort" index="2"]
 
-mode = 0
+mode = 1
 tile_set = ExtResource( 5 )
-cell_size = Vector2( 64, 64 )
-cell_quadrant_size = 16
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 50
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
 cell_tile_origin = 0
@@ -61,14 +69,15 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
+tile_data = PoolIntArray( -131057, 0, 0, -65524, 0, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform", "Z Index" ]
 
 [node name="ForegroundTileMap" type="TileMap" parent="YSort" index="3"]
 
+material = SubResource( 1 )
 z_index = 3
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -83,8 +92,9 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262154, 0, 0 )
-_sections_unfolded = [ "Cell", "Z Index" ]
+tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Cell", "Material", "Z Index" ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
@@ -130,6 +140,6 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 7 )
+script = ExtResource( 9 )
 
 

@@ -55,6 +55,7 @@
     <Compile Include="Scripts\NavPoint.cs" />
     <Compile Include="Scripts\NavPointFade.cs" />
     <Compile Include="Scripts\Player.cs" />
+    <Compile Include="Scripts\SaturationShaderController.cs" />
     <Compile Include="Scripts\StatManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
