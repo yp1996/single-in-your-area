@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=7]
 [ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=8]
 [ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=9]
+[ext_resource path="res://DialogBox.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -141,5 +142,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 9 )
+
+[node name="Polygon2D" parent="." index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 255.787, 400.22 )
+_sections_unfolded = [ "Z Index" ]
 
 
