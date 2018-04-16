@@ -1,20 +1,32 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=3]
 [ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://TileSets/TileSet.tres" type="TileSet" id=5]
-[ext_resource path="res://Shaders/SaturationControl.shader" type="Shader" id=6]
-[ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=7]
-[ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=8]
-[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=9]
-[ext_resource path="res://DialogBox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Shaders/GlitchEffect.shader" type="Shader" id=5]
+[ext_resource path="res://TileSets/TileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Scripts/GlitchEffectShaderController.cs" type="Script" id=7]
+[ext_resource path="res://Shaders/SaturationControl.shader" type="Shader" id=8]
+[ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=9]
+[ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=10]
+[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=11]
+[ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
-shader = ExtResource( 6 )
+shader = ExtResource( 5 )
+shader_param/glitch_intensity = null
+shader_param/stripe_amount = null
+shader_param/stripe_fill = null
+shader_param/wave_frequency = null
+shader_param/displacement = null
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 8 )
 shader_param/saturation = null
 
 [node name="World" type="Node2D" index="0"]
@@ -54,8 +66,9 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
 
 [node name="TileMap" type="TileMap" parent="YSort" index="2"]
 
+material = SubResource( 1 )
 mode = 1
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 6 )
 cell_size = Vector2( 50, 50 )
 cell_quadrant_size = 50
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -71,14 +84,15 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -131057, 0, 0, -65524, 0, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform", "Z Index" ]
+script = ExtResource( 7 )
+_sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Z Index" ]
 
 [node name="ForegroundTileMap" type="TileMap" parent="YSort" index="3"]
 
-material = SubResource( 1 )
+material = SubResource( 2 )
 z_index = 3
 mode = 0
-tile_set = ExtResource( 7 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -94,7 +108,7 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
-script = ExtResource( 8 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Cell", "Material", "Z Index" ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
@@ -141,9 +155,9 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 
-[node name="Polygon2D" parent="." index="2" instance=ExtResource( 10 )]
+[node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 255.787, 400.22 )
 _sections_unfolded = [ "Z Index" ]

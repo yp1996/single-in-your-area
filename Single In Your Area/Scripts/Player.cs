@@ -10,8 +10,7 @@ public class Player : KinematicBody2D
 	const int maxFrames = 4;
 	enum Direction: int {Left = 4, Right = 8, Up = 0, Down = 12}; // value is number of frame 
 	
-	const int timeBetweenUpdates = 100;
-	int timeLastUpdate = 0;
+	int stepsTaken = 0;
     
 	Direction currentDirection = Direction.Up;
 	Sprite sprite;
@@ -33,12 +32,6 @@ public class Player : KinematicBody2D
 
     public override void _Process(float delta)
     {
-	
-		if ((OS.GetTicksMsec() - timeLastUpdate > timeBetweenUpdates) && isMoving) {
-			currentFrame = (currentFrame + 1) % maxFrames;
-			timeLastUpdate = OS.GetTicksMsec();
-		}
-		
 		sprite.Frame = (int) currentDirection + currentFrame;
 		
 		Vector2 targetPos = navPt.clickPosition + offset;
@@ -54,7 +47,16 @@ public class Player : KinematicBody2D
 		}
 		
         MoveAndSlide((movePosition.Normalized()*walkSpeed));
-		int stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
+		stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
+		
+    }
+	
+	private void OnTimerTimeout() {
+		
+		if (isMoving) {
+			currentFrame = (currentFrame + 1) % maxFrames;
+		}
+		
 		if (stepsTaken > 0) {
 			statManager.IncrementStat("anxiety");
 		} else {
@@ -62,7 +64,7 @@ public class Player : KinematicBody2D
 		}
 		
 		
-    }
+	}
 	
 	private void UpdateDirection(Vector2 movePosition) {
 		if (Mathf.Abs(movePosition.x) > Mathf.Abs(movePosition.y)) {

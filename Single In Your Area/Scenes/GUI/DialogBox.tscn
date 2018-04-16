@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/DialogBox.gd" type="Script" id=1]
 
 [node name="Polygon2D" type="Polygon2D"]
 
