@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/roadEast.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/treeShort.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/waterBeachCornerEast.png" type="Texture" id=3]
 
 [node name="Node2D" type="YSort"]
 
@@ -10,5 +12,16 @@ sort_enabled = true
 
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Tree" type="Sprite" parent="." index="1"]
+
+position = Vector2( 120.909, -12.3636 )
+scale = Vector2( 3.18182, 1.72727 )
+texture = ExtResource( 2 )
+
+[node name="Water" type="Sprite" parent="." index="2"]
+
+position = Vector2( 230, -10 )
+texture = ExtResource( 3 )
 
 

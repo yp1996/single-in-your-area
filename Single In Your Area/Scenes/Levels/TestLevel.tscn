@@ -13,7 +13,7 @@
 [ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=11]
 [ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=12]
 
-[sub_resource type="ShaderMaterial" id=1]
+[sub_resource type="ShaderMaterial" id=2]
 
 render_priority = 0
 shader = ExtResource( 5 )
@@ -23,7 +23,7 @@ shader_param/stripe_fill = null
 shader_param/wave_frequency = null
 shader_param/displacement = null
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=3]
 
 render_priority = 0
 shader = ExtResource( 8 )
@@ -62,11 +62,11 @@ autostart = false
 
 editor/display_folded = true
 z_index = 1
-_sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Z Index" ]
 
 [node name="TileMap" type="TileMap" parent="YSort" index="2"]
 
-material = SubResource( 1 )
+material = SubResource( 2 )
 mode = 1
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 50, 50 )
@@ -83,13 +83,13 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131057, 0, 0, -65524, 0, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
+tile_data = PoolIntArray( -327664, 2, 0, -262130, 1, 0, -262128, 2, 0, -196596, 1, 0, -131057, 0, 0, -65524, 0, 0, 12, 2, 0, 65549, 1, 0, 131083, 1, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
 script = ExtResource( 7 )
 _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Z Index" ]
 
 [node name="ForegroundTileMap" type="TileMap" parent="YSort" index="3"]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 z_index = 3
 mode = 0
 tile_set = ExtResource( 9 )

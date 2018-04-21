@@ -48,7 +48,6 @@ public class Player : KinematicBody2D
 		
         MoveAndSlide((movePosition.Normalized()*walkSpeed));
 		stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
-		
     }
 	
 	private void OnTimerTimeout() {

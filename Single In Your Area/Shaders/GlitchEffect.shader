@@ -1,8 +1,8 @@
 shader_type canvas_item;
 uniform float glitch_intensity;
-uniform float stripe_amount = 5.0;
+uniform float stripe_amount = 2.0;
 uniform float stripe_fill = 0.7;
-uniform float wave_frequency = 50.0;
+uniform float wave_frequency = 30.0;
 uniform vec4 displacement = vec4(0.0, 0.0, 0.01, 0.1);
 
 
@@ -35,20 +35,34 @@ void fragment() {
 	
 	vec4 wavyDispl = mix(vec4(1.0,0.0,0.0,1.0), vec4(0.0,1.0,0.0,1.0), (sin(UV.y * wave_frequency * wave_intensity) + 1.0) / 2.0);
  
+	if (new_glitch_intensity <= 0.1) {
+		wavyDispl = vec4(0.0, 0.0, 0.0, 0.0);
+	}
     vec2 displUV = (displacement.xy * stripesRight) - (displacement.xy * stripesLeft);
     displUV += (displacement.zw * wavyDispl.r) - (displacement.zw * wavyDispl.g);
 
 	// CHROMATIC ABERRATION 
 	
     // Sample R G and B of adjacent pixels
-    vec4 rightRed = texture(TEXTURE, UV + displUV + (0.03 * new_glitch_intensity));
+    vec4 rightRed = texture(TEXTURE, UV + displUV + (0.05 * new_glitch_intensity));
     vec4 leftGreen = texture(TEXTURE, UV + displUV);
-    vec4 diagBlue = texture(TEXTURE, UV + displUV + (0.06 * new_glitch_intensity));
+    vec4 diagBlue = texture(TEXTURE, UV + displUV + (0.07 * new_glitch_intensity));
 
+	float finalAlpha = col.a;
+
+    if ((diagBlue.a > 0.0 && rightRed.a > 0.0 && leftGreen.a > 0.0)) {
+		finalAlpha = 1.0;
+	}
+	if (diagBlue.b == 0.0 && rightRed.r == 0.0 && leftGreen.g == 0.0) {
+		finalAlpha = 0.0;
+	}
+	
     col.r = rightRed.r;
     col.g = leftGreen.g;
     col.b = diagBlue.b;
 
+
+
     // Assign the color to the output
-    COLOR = col;
+    COLOR = vec4(col.rgb, finalAlpha);
 }
