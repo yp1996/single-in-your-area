@@ -6,10 +6,12 @@ public class NavPointFade : Sprite
 	float alpha = 1.0f;
 	int startTime;
 	float fadeSpeed = 0.05f;
+	Sprite sprite;
 
     public override void _Ready()
     {
-		startTime = OS.GetUnixTime();         
+		startTime = OS.GetUnixTime(); 
+		sprite = (Sprite) GetNode("navpoint");      
     }
 
     public override void _Process(float delta)
@@ -17,12 +19,12 @@ public class NavPointFade : Sprite
         // Called every frame. Delta is time since last frame.
         // Update game logic here.
 		if (OS.GetUnixTime() - startTime > 0.8) {	
-			this.Modulate().a = alpha;
+			//sprite.SelfModulate.a = alpha;
 			alpha -= fadeSpeed;
 		}
 		if (Input.IsActionPressed("left_click")) {
 			alpha = 1.0f;
-			this.Modulate().a = alpha;
+			//sprite.SelfModulate.a = alpha;
 			startTime = OS.GetUnixTime();
 		}
 		

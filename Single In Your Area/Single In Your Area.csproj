@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\GlitchEffectShaderController.cs" />
     <Compile Include="Scripts\LabelScript.cs" />
+    <Compile Include="Scripts\ModulateMusic.cs" />
     <Compile Include="Scripts\NavPoint.cs" />
     <Compile Include="Scripts\NavPointFade.cs" />
     <Compile Include="Scripts\Player.cs" />

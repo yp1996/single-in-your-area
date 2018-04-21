@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Blank Banshee - MEGA - 10 Hungry Ghost.wav-243df8b9415999e2bb4bbfa12c52f341.sample"
+
+[deps]
+
+source_file="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav"
+source_md5="95fc1ef7f9de16a4d9d7a807e5ef8eb2"
+
+dest_files=[ "res://.import/Blank Banshee - MEGA - 10 Hungry Ghost.wav-243df8b9415999e2bb4bbfa12c52f341.sample" ]
+dest_md5="a789126e6bb9e72057c895dc0173f704"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -36,6 +36,16 @@ public class StatManager : Node
 		}
 	}
 	
+	public float GetRelativeStat(string statName) {
+		Stat stat;
+		if (stats.TryGetValue(statName, out stat)) // Returns true.
+        {
+            return (float) ((float) stat.currentVal / (float) stat.maxVal); 
+        } else {
+			return -666;
+		}
+	}
+	
 	public void IncrementStat(string statName, int increment=1) {
 		Stat stat;
 		if (stats.TryGetValue(statName, out stat)) // Returns true.
