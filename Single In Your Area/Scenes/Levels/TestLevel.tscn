@@ -43,7 +43,6 @@ _sections_unfolded = [ "Sort", "Transform", "Z Index" ]
 
 [node name="navpoint_container" type="Node2D" parent="YSort" index="0"]
 
-editor/display_folded = true
 z_index = 6
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
