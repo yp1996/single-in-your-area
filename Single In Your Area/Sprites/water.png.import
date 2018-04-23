@@ -10,7 +10,7 @@ source_file="res://Sprites/water.png"
 source_md5="8bac0954fb48c58fb39829befadd9b5c"
 
 dest_files=[ "res://.import/water.png-4cfdb011f1597591b095678ad1dbd40e.stex" ]
-dest_md5="fbf8fd531ef35bae1c35daa3bea70dc2"
+dest_md5="386f695aeabbdb9a7cd96fbf4b02cbc4"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

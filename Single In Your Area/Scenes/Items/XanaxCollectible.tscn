@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Items/Collectible.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/XanaxCollectible.cs" type="Script" id=2]
+[ext_resource path="res://Audio/XannyMakeItGoAway.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sprites/Xanax1.png" type="Texture" id=4]
+
+[node name="Collectible" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Sprite" parent="." index="2"]
+
+texture = ExtResource( 4 )
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lil Uzi Vert - XO Tour Llif3 (Official Lyric Video).wav-b94e5b04e5a974cd47439117806cdd20.sample"
+
+[deps]
+
+source_file="res://Audio/Lil Uzi Vert - XO Tour Llif3 (Official Lyric Video).wav"
+source_md5="31badc3c5e7656994151d332ed2ede38"
+
+dest_files=[ "res://.import/Lil Uzi Vert - XO Tour Llif3 (Official Lyric Video).wav-b94e5b04e5a974cd47439117806cdd20.sample" ]
+dest_md5="18b293ab901491e9b3b3bd930195b660"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

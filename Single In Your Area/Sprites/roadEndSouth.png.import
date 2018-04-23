@@ -10,7 +10,7 @@ source_file="res://Sprites/roadEndSouth.png"
 source_md5="94513f98d8d8f95c31907e4b01529838"
 
 dest_files=[ "res://.import/roadEndSouth.png-4c605a1f2e8ebf5029faceb8204960bd.stex" ]
-dest_md5="438d3ba92e3c47aae2e1aeb20729064a"
+dest_md5="e747e274eb27676d147e86475c92801a"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

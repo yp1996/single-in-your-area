@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Collectible.cs" />
+    <Compile Include="Scripts\FentaLeanCollectible.cs" />
     <Compile Include="Scripts\GlitchEffectShaderController.cs" />
     <Compile Include="Scripts\LabelScript.cs" />
     <Compile Include="Scripts\ModulateMusic.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\SaturationShaderController.cs" />
     <Compile Include="Scripts\StatManager.cs" />
+    <Compile Include="Scripts\XanaxCollectible.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

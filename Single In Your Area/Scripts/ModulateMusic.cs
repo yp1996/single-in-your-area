@@ -22,7 +22,7 @@ public class ModulateMusic : AudioStreamPlayer2D
     {
         // Called every frame. Delta is time since last frame.
         // Update game logic here.
-        float relAnx = 1.0f - statManager.GetRelativeStat("anxiety");
+        float relAnx = (float) Math.Log(2.0f - statManager.GetRelativeStat("anxiety"), 2f);
 		sample.MixRate = (int) ((22100.0f)*relAnx + 22100.0f);
     }
 }

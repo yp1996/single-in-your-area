@@ -10,7 +10,7 @@ source_file="res://Sprites/hillSouth.png"
 source_md5="96aa1427e3198f8e4faa8e3d25aba963"
 
 dest_files=[ "res://.import/hillSouth.png-e6f5131a5367e1780cc866596eb9346e.stex" ]
-dest_md5="2bb017d759b07443d8efeb4573662367"
+dest_md5="881801f79053b917135908c0fcf701b5"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

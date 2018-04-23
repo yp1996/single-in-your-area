@@ -10,7 +10,7 @@ source_file="res://Sprites/roadTNorth.png"
 source_md5="9f70709dec61c1511edb5e76958f4742"
 
 dest_files=[ "res://.import/roadTNorth.png-1421bb7680b2a415cb041d5fcaf13502.stex" ]
-dest_md5="b8681c21ed0ff69b7773eb21b3fd5804"
+dest_md5="dc9a30e6f385b5371a9988a6b936b5f7"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

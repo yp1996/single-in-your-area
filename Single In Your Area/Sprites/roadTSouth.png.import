@@ -10,7 +10,7 @@ source_file="res://Sprites/roadTSouth.png"
 source_md5="79d6c69cefb5d54916fd1f526f1e67dc"
 
 dest_files=[ "res://.import/roadTSouth.png-15ffcc0c852eec69c64caf958ee79e73.stex" ]
-dest_md5="1931587084a6d71c78d8b7ad8165c2ac"
+dest_md5="889da9f7540a66d799a862b582c1f729"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

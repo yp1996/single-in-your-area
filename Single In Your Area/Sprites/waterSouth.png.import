@@ -10,7 +10,7 @@ source_file="res://Sprites/waterSouth.png"
 source_md5="3480b7323c7f77945c03f9a5d3cbe5a8"
 
 dest_files=[ "res://.import/waterSouth.png-95a95f21c92cdfffd60f3b712d567958.stex" ]
-dest_md5="5119f6241804ba81a12ba74521ff2f94"
+dest_md5="ff1da091e24dce9afa43aa96f022b9e8"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

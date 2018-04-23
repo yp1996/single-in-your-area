@@ -3,6 +3,8 @@ using System;
 
 public class Player : KinematicBody2D
 {
+	
+	bool isConscious = true;
 
     const float walkSpeed = 100f;
 	public bool isMoving = false;
@@ -15,8 +17,12 @@ public class Player : KinematicBody2D
 	Direction currentDirection = Direction.Up;
 	Sprite sprite;
     NavPoint navPt;
+	Timer passOutTimer;
+	
+	AnimationPlayer passOutAnimation;
+	
 	Vector2 offset = new Vector2(0,30); // offset in order not to block the character by the nav arrow
-
+	Vector2 defaultPosition = new Vector2(470,270);
 	StatManager statManager;
 	
     public override void _Ready()
@@ -27,28 +33,39 @@ public class Player : KinematicBody2D
         navPt = (NavPoint)GetNode("../navpoint_container");
         sprite = (Sprite)GetNode("Sprite");
 		statManager = (StatManager) GetNode("/root/StatManager");
-        
-    }
+        passOutAnimation = (AnimationPlayer) GetNode("../../CanvasLayer/PassOut");
+   		passOutTimer = (Timer) GetNode("PassOutTimer");
+ }
 
     public override void _Process(float delta)
     {
-		sprite.Frame = (int) currentDirection + currentFrame;
+		if (isConscious) {
 		
-		Vector2 targetPos = navPt.clickPosition + offset;
-		Vector2 movePosition = targetPos - GetPosition();
-		
-		if (movePosition.Length() <= 1) { // Comparing to 1 vs 0 to avoid weird jitter
-			movePosition = new Vector2(0,0);
-			isMoving = false;
-			currentFrame = 0;
-		} else {
-			isMoving = true;
-			UpdateDirection(movePosition);
+			if (statManager.GetStat("health") == 0) {
+				PassOut();
+			}
+			sprite.Frame = (int) currentDirection + currentFrame;
+			
+			Vector2 targetPos = navPt.clickPosition + offset;
+			Vector2 movePosition = targetPos - GetPosition();
+			
+			if (movePosition.Length() <= 1) { // Comparing to 1 vs 0 to avoid weird jitter
+				movePosition = new Vector2(0,0);
+				isMoving = false;
+				currentFrame = 0;
+			} else {
+				isMoving = true;
+				UpdateDirection(movePosition);
+			}
+			
+	        MoveAndSlide((movePosition.Normalized()*walkSpeed));
+			stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
+			
+			if (GetSlideCount() > 0) {
+				CheckCollectibles();
+			}
 		}
-		
-        MoveAndSlide((movePosition.Normalized()*walkSpeed));
-		stepsTaken = (int) (movePosition.Normalized()*walkSpeed).Length();
-    }
+	}
 	
 	private void OnTimerTimeout() {
 		
@@ -60,9 +77,32 @@ public class Player : KinematicBody2D
 			statManager.IncrementStat("anxiety");
 		} else {
 			statManager.IncrementStat("anxiety", -1);
+		}	
+	}
+	
+	private void CheckCollectibles() {
+		
+		KinematicCollision2D collision = GetSlideCollision(0);
+		Node2D body = (Node2D) collision.Collider;
+		if (body.GetParent().GetParent().GetName().Contains("Collectible")) {
+			
+			GD.Print(body.GetParent().GetParent().GetParent().GetName());
+			((Collectible) body.GetParent().GetParent()).Consume();
+			((Node2D) body.GetParent()).QueueFree();
 		}
-		
-		
+	}
+	
+	private void PassOut() {
+		isConscious = false;
+		passOutTimer.Start();
+		passOutAnimation.Play("fade");
+	}
+	
+	private void OnPassOutTimeout(){
+		navPt.SetPosition(defaultPosition);
+		SetPosition(defaultPosition);
+		isConscious = true;
+		statManager.SetStat("health", 100);
 	}
 	
 	private void UpdateDirection(Vector2 movePosition) {
@@ -79,6 +119,8 @@ public class Player : KinematicBody2D
 				currentDirection = Direction.Down;
 			}
 		}
-		
 	}
+	
+	
 }
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
@@ -11,10 +11,13 @@
 [ext_resource path="res://Shaders/SaturationControl.shader" type="Shader" id=9]
 [ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=11]
-[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=12]
-[ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=14]
-[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=15]
+[ext_resource path="res://Scenes/Items/XanaxCollectible.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Items/FentaLeanCollectible.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=14]
+[ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=16]
+[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=18]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -33,6 +36,30 @@ _sections_unfolded = [ "Resource", "shader_param" ]
 render_priority = 0
 shader = ExtResource( 9 )
 shader_param/saturation = null
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "fade"
+length = 10.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 7, 9.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=4]
+
+render_priority = 0
+shader = ExtResource( 16 )
 
 [node name="World" type="Node2D" index="0"]
 
@@ -71,10 +98,10 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Z Inde
 [node name="TileMap" type="TileMap" parent="YSort" index="2"]
 
 material = SubResource( 1 )
-position = Vector2( -50, 0 )
+position = Vector2( -10, -10 )
 mode = 1
 tile_set = ExtResource( 7 )
-cell_size = Vector2( 50, 50 )
+cell_size = Vector2( 64, 32 )
 cell_quadrant_size = 50
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
@@ -88,7 +115,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -327664, 2, 0, -262130, 1, 0, -262128, 2, 0, -196596, 1, 0, -131057, 0, 0, -65524, 0, 0, 9, 0, 0, 12, 2, 0, 65545, 0, 0, 65549, 1, 0, 131083, 1, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
+tile_data = PoolIntArray( -327666, 3, 0, -327665, 3, 0, -327664, 3, 0, -327663, 3, 0, -327662, 3, 0, -262131, 3, 0, -262130, 3, 0, -262129, 3, 0, -262128, 3, 0, -262127, 3, 0, -262126, 3, 0, -262125, 3, 0, -196596, 1, 0, -196595, 3, 0, -196594, 3, 0, -196593, 3, 0, -196592, 3, 0, -196591, 3, 0, -196590, 3, 0, -196589, 3, 0, -196588, 3, 0, -131059, 3, 0, -131058, 3, 0, -131057, 3, 0, -131056, 3, 0, -131055, 3, 0, -131054, 3, 0, -131053, 3, 0, -131052, 3, 0, -65524, 0, 0, -65523, 3, 0, -65522, 3, 0, -65521, 3, 0, -65520, 3, 0, -65519, 3, 0, -65518, 3, 0, -65517, 3, 0, -65516, 3, 0, 9, 0, 0, 12, 2, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 20, 3, 0, 65545, 0, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65556, 3, 0, 131083, 1, 0, 131085, 3, 0, 131086, 3, 0, 131087, 3, 0, 131088, 3, 0, 131089, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 196614, 1, 0, 196616, 1, 0, 196622, 3, 0, 196623, 3, 0, 196624, 3, 0, 196625, 3, 0, 196626, 3, 0, 196627, 3, 0, 196628, 3, 0, 196629, 3, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 327686, 0, 0, 327688, 1, 0, 327696, 3, 0, 327697, 3, 0, 327698, 3, 0, 327699, 3, 0 )
 script = ExtResource( 8 )
 _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Z Index" ]
 
@@ -96,7 +123,7 @@ _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform",
 
 material = SubResource( 2 )
 z_index = 3
-mode = 0
+mode = 1
 tile_set = ExtResource( 10 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
@@ -112,9 +139,24 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
+tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
 script = ExtResource( 11 )
 _sections_unfolded = [ "Cell", "Material", "Z Index" ]
+
+[node name="Collectibles" type="Node2D" parent="YSort" index="4"]
+
+[node name="Collectible" parent="YSort/Collectibles" index="0" instance=ExtResource( 12 )]
+
+position = Vector2( 515, 225 )
+scale = Vector2( 0.937499, 0.937499 )
+
+[node name="Collectible2" parent="YSort/Collectibles" index="1" instance=ExtResource( 13 )]
+
+position = Vector2( 480, 230 )
+
+[node name="Collectible3" parent="YSort/Collectibles" index="2" instance=ExtResource( 13 )]
+
+position = Vector2( 420, 400 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
@@ -159,25 +201,57 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 12 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 13 )]
+[node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 15 )]
 
 position = Vector2( 90, 250 )
 scale = Vector2( 0.371852, 0.600907 )
 polygon = PoolVector2Array( -240, 16, -240, 64, -242.032, 99.9999, 215.139, 99.849, 215.139, 16.6415 )
 _sections_unfolded = [ "Z Index" ]
 
+[node name="PassOut" type="AnimationPlayer" parent="CanvasLayer" index="2"]
+
+root_node = NodePath("TextureRect")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/fade = SubResource( 3 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PassOut" index="0"]
+
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 4 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1290.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+_sections_unfolded = [ "Material", "Rect", "Visibility" ]
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 17 )
 volume_db = 1.0
 autoplay = true
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-script = ExtResource( 15 )
+script = ExtResource( 18 )
 
 

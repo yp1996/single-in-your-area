@@ -10,7 +10,7 @@ source_file="res://Sprites/lotPark.png"
 source_md5="47fcb3f14f2524800963b6bcbbb85387"
 
 dest_files=[ "res://.import/lotPark.png-67aa643416df4b2cd6201733d0705064.stex" ]
-dest_md5="1a72d879702f64d1454a99a7e2506cb9"
+dest_md5="23396071bd7614908446f5a9d58f25f0"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

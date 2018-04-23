@@ -10,7 +10,7 @@ source_file="res://Sprites/waterBeachCornerSouth.png"
 source_md5="fe8806841471ab47ab6be3f1ce5765bd"
 
 dest_files=[ "res://.import/waterBeachCornerSouth.png-8986ba0c24aa88214795e6d816348814.stex" ]
-dest_md5="3eeda079ea42acab52e1f724bd10f698"
+dest_md5="32eaac6736c989996c0083bba440dca5"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
