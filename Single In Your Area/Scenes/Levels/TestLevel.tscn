@@ -32,7 +32,7 @@ render_priority = 0
 shader = ExtResource( 9 )
 shader_param/saturation = null
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
@@ -116,7 +116,6 @@ _sections_unfolded = [ "Cell", "Material", "Z Index" ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
