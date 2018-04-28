@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 470, 270 )
 scale = Vector2( 0.65625, 0.65625 )
@@ -71,7 +71,7 @@ editor_draw_drag_margin = false
 [node name="Timer" type="Timer" parent="." index="4"]
 
 process_mode = 0
-wait_time = 0.1
+wait_time = 0.2
 one_shot = false
 autostart = true
 _sections_unfolded = [ "Pause" ]

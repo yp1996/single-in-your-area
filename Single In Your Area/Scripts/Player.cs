@@ -110,7 +110,7 @@ public class Player : KinematicBody2D
 	}
 	
 	private void OnPassOutTimeout(){
-		navPt.SetPosition(defaultPosition);
+		navPt.clickPosition = defaultPosition;
 		SetPosition(defaultPosition);
 		isConscious = true;
 		statManager.SetStat("health", 100);

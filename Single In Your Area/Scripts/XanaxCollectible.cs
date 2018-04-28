@@ -9,4 +9,7 @@ public class XanaxCollectible : Collectible
 		statManager.IncrementStat("anxiety", -50);
 		statManager.IncrementStat("emotional_distance", 50);
 	}
+	
+	public override void ProcessFunction() {
+	}
 }

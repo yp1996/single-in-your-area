@@ -27,7 +27,7 @@ public class FentaLeanCollectible : Collectible
 		}
 	}
 	
-	public override void _Process(float delta) 
+	public override void ProcessFunction() 
 	{
 		if (isActive) {
 			statManager.SetStat("anxiety", 0);

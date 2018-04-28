@@ -28,8 +28,9 @@ public class StatManager : Node
 	    Stat health = new Stat("health", 0, 100, 100);
 		stats.Add("health", health);
 		
-		Stat distance = new Stat("emotional_distance", 0, 100, 0);
-		stats.Add("emotional_distance", distance);        
+		Stat distance = new Stat("emotional_distance", 0, 100, 50);
+		stats.Add("emotional_distance", distance);
+	          
     }
 	
 	public int GetStat(string statName) {

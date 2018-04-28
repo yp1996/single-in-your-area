@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
@@ -11,13 +11,12 @@
 [ext_resource path="res://Shaders/SaturationControl.shader" type="Shader" id=9]
 [ext_resource path="res://TileSets/ForegroundTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=11]
-[ext_resource path="res://Scenes/Items/XanaxCollectible.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Items/FentaLeanCollectible.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=14]
-[ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=16]
-[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=17]
-[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=18]
+[ext_resource path="res://Scripts/CollectibleSpawner.cs" type="Script" id=12]
+[ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=13]
+[ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=15]
+[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=16]
+[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=17]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -59,7 +58,7 @@ tracks/0/keys = {
 [sub_resource type="ShaderMaterial" id=4]
 
 render_priority = 0
-shader = ExtResource( 16 )
+shader = ExtResource( 15 )
 
 [node name="World" type="Node2D" index="0"]
 
@@ -122,6 +121,7 @@ _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform",
 [node name="ForegroundTileMap" type="TileMap" parent="YSort" index="3"]
 
 material = SubResource( 2 )
+position = Vector2( -70, 0 )
 z_index = 3
 mode = 1
 tile_set = ExtResource( 10 )
@@ -139,24 +139,21 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
+tile_data = PoolIntArray( -65525, 0, 0, 196613, 0, 0, 196615, 0, 0, 196617, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262154, 0, 0, 327686, 0, 0, 327687, 0, 0 )
 script = ExtResource( 11 )
 _sections_unfolded = [ "Cell", "Material", "Z Index" ]
 
 [node name="Collectibles" type="Node2D" parent="YSort" index="4"]
 
-[node name="Collectible" parent="YSort/Collectibles" index="0" instance=ExtResource( 12 )]
+script = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
 
-position = Vector2( 515, 225 )
-scale = Vector2( 0.937499, 0.937499 )
+[node name="SpawnTimer" type="Timer" parent="YSort/Collectibles" index="0"]
 
-[node name="Collectible2" parent="YSort/Collectibles" index="1" instance=ExtResource( 13 )]
-
-position = Vector2( 480, 230 )
-
-[node name="Collectible3" parent="YSort/Collectibles" index="2" instance=ExtResource( 13 )]
-
-position = Vector2( 420, 400 )
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
@@ -201,10 +198,10 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 14 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 15 )]
+[node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 14 )]
 
 position = Vector2( 90, 250 )
 scale = Vector2( 0.371852, 0.600907 )
@@ -245,13 +242,15 @@ _sections_unfolded = [ "Material", "Rect", "Visibility" ]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = ExtResource( 17 )
+stream = ExtResource( 16 )
 volume_db = 1.0
 autoplay = true
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-script = ExtResource( 18 )
+script = ExtResource( 17 )
+
+[connection signal="timeout" from="YSort/Collectibles/SpawnTimer" to="YSort/Collectibles" method="OnSpawnTimerTimeout"]
 
 
