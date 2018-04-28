@@ -7,5 +7,6 @@ public class XanaxCollectible : Collectible
 		AudioStreamPlayer audio = (AudioStreamPlayer) GetNode("Audio");
 		audio.Play();
 		statManager.IncrementStat("anxiety", -50);
+		statManager.IncrementStat("emotional_distance", 50);
 	}
 }

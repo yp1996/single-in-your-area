@@ -4,6 +4,7 @@ using System;
 public class FentaLeanCollectible : Collectible
 {
 	private bool isActive = false;
+	private const int chanceOfPassOut = 50;
 	
     public override void ConsumeFunction() {
 		
@@ -17,10 +18,13 @@ public class FentaLeanCollectible : Collectible
 		
 		Random rnd = new Random();
 		int rndNum = rnd.Next(0, 100);
-		if (rndNum <= 5) {
+		if (rndNum <= chanceOfPassOut) {
 			statManager.IncrementStat("health", -500);
 		}
-		Engine.TimeScale = 0.1f;
+		else {
+			statManager.IncrementStat("emotional_distance", 20);
+			Engine.TimeScale = 0.1f;
+		}
 	}
 	
 	public override void _Process(float delta) 

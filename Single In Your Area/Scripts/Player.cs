@@ -13,6 +13,8 @@ public class Player : KinematicBody2D
 	enum Direction: int {Left = 4, Right = 8, Up = 0, Down = 12}; // value is number of frame 
 	
 	int stepsTaken = 0;
+	
+	int anxietyModifier = 1; // how fast anxiety increases
     
 	Direction currentDirection = Direction.Up;
 	Sprite sprite;
@@ -41,7 +43,7 @@ public class Player : KinematicBody2D
     {
 		if (isConscious) {
 		
-			if (statManager.GetStat("health") == 0) {
+			if (IsPassedOut()) {
 				PassOut();
 			}
 			sprite.Frame = (int) currentDirection + currentFrame;
@@ -67,17 +69,23 @@ public class Player : KinematicBody2D
 		}
 	}
 	
+	private bool IsPassedOut() {
+		return (statManager.GetStat("health") == 0 || statManager.GetStat("anxiety") == 100);
+	}
+	
 	private void OnTimerTimeout() {
 		
-		if (isMoving) {
-			currentFrame = (currentFrame + 1) % maxFrames;
+		if (isConscious) {
+			if (isMoving) {
+				currentFrame = (currentFrame + 1) % maxFrames;
+			}
+			
+			if (stepsTaken > 0) {
+				statManager.IncrementStat("anxiety", anxietyModifier);
+			} else {
+				statManager.IncrementStat("anxiety", -1);
+			}	
 		}
-		
-		if (stepsTaken > 0) {
-			statManager.IncrementStat("anxiety");
-		} else {
-			statManager.IncrementStat("anxiety", -1);
-		}	
 	}
 	
 	private void CheckCollectibles() {
@@ -94,6 +102,9 @@ public class Player : KinematicBody2D
 	
 	private void PassOut() {
 		isConscious = false;
+		stepsTaken = 0;
+		anxietyModifier += 1;
+		statManager.SetStat("anxiety", 0);
 		passOutTimer.Start();
 		passOutAnimation.Play("fade");
 	}

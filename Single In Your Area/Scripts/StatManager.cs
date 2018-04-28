@@ -26,7 +26,10 @@ public class StatManager : Node
 		stats.Add("anxiety", anxiety);   
 		
 	    Stat health = new Stat("health", 0, 100, 100);
-		stats.Add("health", health);      
+		stats.Add("health", health);
+		
+		Stat distance = new Stat("emotional_distance", 0, 100, 0);
+		stats.Add("emotional_distance", distance);        
     }
 	
 	public int GetStat(string statName) {
@@ -64,11 +67,15 @@ public class StatManager : Node
             stat.currentVal = Mathf.Max(Mathf.Min(value, stat.maxVal), stat.minVal);
         } 
 	}
+	
+	public bool IsStatMaxed(string statName, int value) {
+		Stat stat;
+		if (stats.TryGetValue(statName, out stat)) // Returns true.
+	    {
+	        return (stat.currentVal == stat.maxVal);
+	    } else {
+			return false;
+		}
+	}
 
-//    public override void _Process(float delta)
-//    {
-//        // Called every frame. Delta is time since last frame.
-//        // Update game logic here.
-//        
-//    }
 }
