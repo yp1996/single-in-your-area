@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/NavPointFade.cs" type="Script" id=3]
+[ext_resource path="res://Scripts/navpoint.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaders/GlitchEffect.shader" type="Shader" id=5]
 [ext_resource path="res://Sprites/noise.png" type="Texture" id=6]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Scripts/SaturationShaderController.cs" type="Script" id=11]
 [ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=12]
 [ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=14]
+[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=15]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -43,7 +45,6 @@ _sections_unfolded = [ "Sort", "Transform", "Z Index" ]
 
 [node name="navpoint_container" type="Node2D" parent="YSort" index="0"]
 
-editor/display_folded = true
 z_index = 6
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
@@ -70,6 +71,7 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Z Inde
 [node name="TileMap" type="TileMap" parent="YSort" index="2"]
 
 material = SubResource( 1 )
+position = Vector2( -50, 0 )
 mode = 1
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 50, 50 )
@@ -86,7 +88,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -327664, 2, 0, -262130, 1, 0, -262128, 2, 0, -196596, 1, 0, -131057, 0, 0, -65524, 0, 0, 12, 2, 0, 65549, 1, 0, 131083, 1, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
+tile_data = PoolIntArray( -327664, 2, 0, -262130, 1, 0, -262128, 2, 0, -196596, 1, 0, -131057, 0, 0, -65524, 0, 0, 9, 0, 0, 12, 2, 0, 65545, 0, 0, 65549, 1, 0, 131083, 1, 0, 196614, 1, 0, 196616, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 327686, 0, 0, 327688, 1, 0 )
 script = ExtResource( 8 )
 _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Z Index" ]
 
@@ -158,10 +160,24 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 12 )
+_sections_unfolded = [ "Rect" ]
 
 [node name="Polygon2D" parent="CanvasLayer" index="1" instance=ExtResource( 13 )]
 
-position = Vector2( 255.787, 400.22 )
+position = Vector2( 90, 250 )
+scale = Vector2( 0.371852, 0.600907 )
+polygon = PoolVector2Array( -240, 16, -240, 64, -242.032, 99.9999, 215.139, 99.849, 215.139, 16.6415 )
 _sections_unfolded = [ "Z Index" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 14 )
+volume_db = 1.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+script = ExtResource( 15 )
 
 
