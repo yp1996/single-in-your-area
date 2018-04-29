@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Chat/Message.cs" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=3]
 
 [node name="Message" type="HBoxContainer"]
 
@@ -48,21 +49,24 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 34.0
-margin_top = 8.0
+margin_top = 12.0
 margin_right = 146.0
-margin_bottom = 22.0
+margin_bottom = 18.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.788093, 0.198364, 0.976562, 1 )
+custom_colors/font_color_shadow = Color( 0.6, 0.6, 0.6, 1 )
 text = "WOW"
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="MyAvatar" type="TextureRect" parent="." index="2"]
 

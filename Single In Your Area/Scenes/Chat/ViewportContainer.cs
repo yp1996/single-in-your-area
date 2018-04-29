@@ -29,7 +29,6 @@ public class ViewportContainer : VBoxContainer {
 
   private void addMessage(string text, bool isPlayer) {
     GD.Print("Adding messages...");
-
     Message msg = (Message) msgScene.Instance();
     GetNode("Container/MessageList").AddChild(msg);
     msg.setMessage(text);
@@ -97,33 +96,23 @@ public class ViewportContainer : VBoxContainer {
   //
 
   private void _on_Answer1_gui_input(Godot.Object ev) {
-    if (ev is InputEventScreenTouch) {
-      bool down = ((InputEventScreenTouch)ev).Pressed;
-      if (!down) {
-        doWeRespond(0);
-      }
-    }
+    replyIfTouchUp(ev, 0);
   }
-
   private void _on_Answer2_gui_input(Godot.Object ev) {
-    if (ev is InputEventScreenTouch) {
-      bool down = ((InputEventScreenTouch)ev).Pressed;
-      if (!down) {
-        doWeRespond(1);
-      }
-    }
+    replyIfTouchUp(ev, 1);
   }
-
   private void _on_Answer3_gui_input(Godot.Object ev) {
-    if (ev is InputEventScreenTouch) {
-      bool down = ((InputEventScreenTouch)ev).Pressed;
-      if (!down) {
-        doWeRespond(2);
-      }
-    }
+    replyIfTouchUp(ev, 2);
   }
-
   private void _on_Timer_timeout() {
     doThemSay();
+  }
+
+  private void replyIfTouchUp(Godot.Object ev, int option) {
+    if (ev is InputEventScreenTouch) {
+      if (!((InputEventScreenTouch)ev).Pressed) {
+        doWeRespond(option);
+      }
+    }
   }
 }
