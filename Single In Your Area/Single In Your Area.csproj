@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\Chat\Message.cs" />
+    <Compile Include="Scenes\Chat\MessageLogic.cs" />
+    <Compile Include="Scenes\Chat\ViewportContainer.cs" />
     <Compile Include="Scripts\GlitchEffectShaderController.cs" />
     <Compile Include="Scripts\LabelScript.cs" />
     <Compile Include="Scripts\ModulateMusic.cs" />

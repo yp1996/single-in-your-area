@@ -11,7 +11,7 @@ render_priority = 0
 shader = ExtResource( 1 )
 shader_param/saturation = null
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 6 )
@@ -20,7 +20,7 @@ extents = Vector2( 10, 6 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-material = SubResource( 3 )
+material = SubResource( 1 )
 z_index = 3
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Z Index" ]
@@ -38,6 +38,4 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
 
 position = Vector2( 0, 10 )
-shape = SubResource( 1 )
-
-
+shape = SubResource( 2 )
