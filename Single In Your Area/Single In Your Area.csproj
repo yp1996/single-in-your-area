@@ -53,6 +53,9 @@
     <Compile Include="Scripts\Collectible.cs" />
     <Compile Include="Scripts\CollectibleSpawner.cs" />
     <Compile Include="Scripts\FentaLeanCollectible.cs" />
+    <Compile Include="Scenes\Chat\Message.cs" />
+    <Compile Include="Scenes\Chat\MessageLogic.cs" />
+    <Compile Include="Scenes\Chat\ViewportContainer.cs" />
     <Compile Include="Scripts\GlitchEffectShaderController.cs" />
     <Compile Include="Scripts\LabelScript.cs" />
     <Compile Include="Scripts\ModulateMusic.cs" />

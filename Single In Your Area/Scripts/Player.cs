@@ -10,12 +10,10 @@ public class Player : KinematicBody2D
 	public bool isMoving = false;
 	int currentFrame = 0;
 	const int maxFrames = 4;
-	enum Direction: int {Left = 4, Right = 8, Up = 0, Down = 12}; // value is number of frame 
-	
+	enum Direction: int {Left = 4, Right = 8, Up = 0, Down = 12}; // value is number of frame
+
 	int stepsTaken = 0;
-	
 	int anxietyModifier = 1; // how fast anxiety increases
-    
 	Direction currentDirection = Direction.Up;
 	Sprite sprite;
     NavPoint navPt;
@@ -26,7 +24,7 @@ public class Player : KinematicBody2D
 	Vector2 offset = new Vector2(0,30); // offset in order not to block the character by the nav arrow
 	Vector2 defaultPosition = new Vector2(470,270);
 	StatManager statManager;
-	
+
     public override void _Ready()
     {
         GD.Print("HELLO THERE");
@@ -114,8 +112,9 @@ public class Player : KinematicBody2D
 		SetPosition(defaultPosition);
 		isConscious = true;
 		statManager.SetStat("health", 100);
+
 	}
-	
+
 	private void UpdateDirection(Vector2 movePosition) {
 		if (Mathf.Abs(movePosition.x) > Mathf.Abs(movePosition.y)) {
 				if (movePosition.x > 0) {
