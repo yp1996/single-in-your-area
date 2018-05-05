@@ -1,11 +1,11 @@
 # Godot-specific ignores
-"Single In Your Area"/.import/
-"Single In Your Area"/export.cfg
-"Single In Your Area"/export_presets.cfg
+Single\ In\ Your\ Area/.import/
+Single\ In\ Your\ Area/export.cfg
+Single\ In\ Your\ Area/export_presets.cfg
 
 # Mono-specific ignores
-"Single In Your Area"/.mono/
+Single\ In\ Your\ Area/.mono/
 
 # System/tool-specific ignores
-"Single In Your Area"/.directory
-"Single In Your Area"/*~
+Single\ In\ Your\ Area/.directory
+Single\ In\ Your\ Area/*~
