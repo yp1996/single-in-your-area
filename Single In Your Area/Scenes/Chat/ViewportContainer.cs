@@ -9,10 +9,13 @@ using Godot;
 using System;
 
 public class ViewportContainer : VBoxContainer {
-  Timer replyTimer, scrollTimer;
+  Timer replyTimer, scrollTimer, scrollDownTimer;
   PackedScene msgScene;
 
   bool themSay = true;
+  enum states {Up, Down, On, Off};
+  states currentState = states.Off;
+  float stepSize = 5.0f;
   int messageAt = 0;
 
   public override void _Ready() {
@@ -20,8 +23,29 @@ public class ViewportContainer : VBoxContainer {
     GD.Print("VC Init");
     replyTimer = (Timer) GetNode("ReplyTimer");
     scrollTimer = (Timer) GetNode("MoveScrollTimer");
+	scrollDownTimer = (Timer) GetNode("ScrollDownTimer");
     msgScene = (PackedScene) ResourceLoader.Load("res://Scenes/Chat/Message.tscn");
     doThemSay();
+  }
+
+  public override void _Process(float delta) {
+	
+	if (Input.IsActionPressed("right_click")) {
+		if (currentState == states.Up || currentState == states.Off) {
+			currentState = states.Down;
+			scrollDownTimer.Start();
+		}
+		else if (currentState == states.Down || currentState == states.On) {
+			currentState = states.Up;
+			scrollDownTimer.Start();
+		}
+	}
+	
+	if (currentState == states.Up) {
+		this.SetPosition(this.GetPosition() - new Vector2(0f, stepSize));
+	} else if (currentState == states.Down) {
+		this.SetPosition(this.GetPosition() + new Vector2(0f, stepSize));
+	}
   }
 
 
@@ -117,6 +141,14 @@ public class ViewportContainer : VBoxContainer {
   private void _on_ReplyTimer_timeout() {
     doThemSay();
   }
+  private void _on_ScrollDownTimer_timeout()
+  {
+	if (currentState == states.Down) {
+		currentState = states.On;
+	} else if (currentState == states.Up) {
+		currentState = states.Off;
+	}
+  }
   private void _on_MoveScrollTimer_timeout() {
     ScrollContainer container = (ScrollContainer) GetNode("Panel/ScrollContainer");
     VBoxContainer messageList = (VBoxContainer) GetNode("Panel/ScrollContainer/MessageList");
@@ -134,3 +166,6 @@ public class ViewportContainer : VBoxContainer {
     }
   }
 }
+
+
+

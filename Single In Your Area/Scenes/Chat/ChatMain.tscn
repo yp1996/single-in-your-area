@@ -109,7 +109,7 @@ size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 _sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Rect", "Scroll", "Size Flags", "Theme", "custom_styles" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ViewportContainer/Panel" index="2"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ViewportContainer/Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -260,6 +260,13 @@ wait_time = 1.0
 one_shot = true
 autostart = false
 
+[node name="ScrollDownTimer" type="Timer" parent="ViewportContainer" index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
 [connection signal="gui_input" from="ViewportContainer/TextEntry/Answer1" to="ViewportContainer" method="_on_Answer1_gui_input"]
 
 [connection signal="gui_input" from="ViewportContainer/TextEntry/Answer2" to="ViewportContainer" method="_on_Answer2_gui_input"]
@@ -269,5 +276,7 @@ autostart = false
 [connection signal="timeout" from="ViewportContainer/ReplyTimer" to="ViewportContainer" method="_on_ReplyTimer_timeout"]
 
 [connection signal="timeout" from="ViewportContainer/MoveScrollTimer" to="ViewportContainer" method="_on_MoveScrollTimer_timeout"]
+
+[connection signal="timeout" from="ViewportContainer/ScrollDownTimer" to="ViewportContainer" method="_on_ScrollDownTimer_timeout"]
 
 

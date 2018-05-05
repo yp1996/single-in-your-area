@@ -2,6 +2,7 @@ using Godot;
 using System;
 
 static class MessageLogic {
+
   static string[] THEIR_MESSAGES = {
     "Hey there!",
     "Nm, just chillin. Hbu?",

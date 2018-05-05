@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
@@ -15,8 +15,9 @@
 [ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=13]
 [ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=15]
-[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=16]
-[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=17]
+[ext_resource path="res://Scenes/Chat/ChatMain.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=18]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -60,7 +61,7 @@ tracks/0/keys = {
 render_priority = 0
 shader = ExtResource( 15 )
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
@@ -90,7 +91,6 @@ autostart = false
 
 [node name="Player" parent="YSort" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 z_index = 1
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Z Index" ]
 
@@ -114,7 +114,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -327666, 3, 0, -327665, 3, 0, -327664, 3, 0, -327663, 3, 0, -327662, 3, 0, -262131, 3, 0, -262130, 3, 0, -262129, 3, 0, -262128, 3, 0, -262127, 3, 0, -262126, 3, 0, -262125, 3, 0, -196596, 1, 0, -196595, 3, 0, -196594, 3, 0, -196593, 3, 0, -196592, 3, 0, -196591, 3, 0, -196590, 3, 0, -196589, 3, 0, -196588, 3, 0, -131059, 3, 0, -131058, 3, 0, -131057, 3, 0, -131056, 3, 0, -131055, 3, 0, -131054, 3, 0, -131053, 3, 0, -131052, 3, 0, -65524, 0, 0, -65523, 3, 0, -65522, 3, 0, -65521, 3, 0, -65520, 3, 0, -65519, 3, 0, -65518, 3, 0, -65517, 3, 0, -65516, 3, 0, 9, 0, 0, 12, 2, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 20, 3, 0, 65545, 0, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65556, 3, 0, 131083, 1, 0, 131085, 3, 0, 131086, 3, 0, 131087, 3, 0, 131088, 3, 0, 131089, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 196614, 1, 0, 196616, 1, 0, 196622, 3, 0, 196623, 3, 0, 196624, 3, 0, 196625, 3, 0, 196626, 3, 0, 196627, 3, 0, 196628, 3, 0, 196629, 3, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 327686, 0, 0, 327688, 1, 0, 327696, 3, 0, 327697, 3, 0, 327698, 3, 0, 327699, 3, 0 )
+tile_data = PoolIntArray( -327667, 3, 0, -327666, 3, 0, -327665, 3, 0, -327664, 3, 0, -327663, 3, 0, -327662, 3, 0, -327661, 3, 0, -327660, 3, 0, -327659, 3, 0, -262131, 3, 0, -262130, 3, 0, -262129, 3, 0, -262128, 3, 0, -262127, 3, 0, -262126, 3, 0, -262125, 3, 0, -262124, 3, 0, -262123, 3, 0, -196596, 1, 0, -196595, 3, 0, -196594, 3, 0, -196593, 3, 0, -196592, 3, 0, -196591, 3, 0, -196590, 3, 0, -196589, 3, 0, -196588, 3, 0, -196587, 3, 0, -196586, 3, 0, -131059, 3, 0, -131058, 3, 0, -131057, 3, 0, -131056, 3, 0, -131055, 3, 0, -131054, 3, 0, -131053, 3, 0, -131052, 3, 0, -131051, 3, 0, -65524, 0, 0, -65523, 3, 0, -65522, 3, 0, -65521, 3, 0, -65520, 3, 0, -65519, 3, 0, -65518, 3, 0, -65517, 3, 0, -65516, 3, 0, -65515, 3, 0, 9, 0, 0, 12, 2, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 20, 3, 0, 21, 3, 0, 65545, 0, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65556, 3, 0, 65557, 3, 0, 131083, 1, 0, 131085, 3, 0, 131086, 3, 0, 131087, 3, 0, 131088, 3, 0, 131089, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 196614, 1, 0, 196616, 1, 0, 196621, 3, 0, 196622, 3, 0, 196623, 3, 0, 196624, 3, 0, 196625, 3, 0, 196626, 3, 0, 196627, 3, 0, 196628, 3, 0, 196629, 3, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 262165, 3, 0, 327686, 0, 0, 327688, 1, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327697, 3, 0, 327698, 3, 0, 327699, 3, 0, 327700, 3, 0, 327701, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393234, 3, 0, 393235, 3, 0, 393236, 3, 0, 393237, 3, 0 )
 script = ExtResource( 8 )
 _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Z Index" ]
 
@@ -240,16 +240,20 @@ expand = true
 stretch_mode = 2
 _sections_unfolded = [ "Material", "Rect", "Visibility" ]
 
+[node name="Screen" parent="CanvasLayer" index="3" instance=ExtResource( 16 )]
+
+position = Vector2( -1.01601, -299.439 )
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = 1.0
 autoplay = true
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 
 [connection signal="timeout" from="YSort/Collectibles/SpawnTimer" to="YSort/Collectibles" method="OnSpawnTimerTimeout"]
 
