@@ -62,6 +62,7 @@
     <Compile Include="Scripts\NavPoint.cs" />
     <Compile Include="Scripts\NavPointFade.cs" />
     <Compile Include="Scripts\Player.cs" />
+    <Compile Include="Scripts\Requirement.cs" />
     <Compile Include="Scripts\SaturationShaderController.cs" />
     <Compile Include="Scripts\StatManager.cs" />
     <Compile Include="Scripts\XanaxCollectible.cs" />

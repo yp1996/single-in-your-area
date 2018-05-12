@@ -14,7 +14,7 @@ public class Message : HBoxContainer {
   }
 
   public void setMessage(string message) {
-    text.Text = message;
+      text.Text = message;
   }
 
   public void setIsPlayer(bool isPlayer) {

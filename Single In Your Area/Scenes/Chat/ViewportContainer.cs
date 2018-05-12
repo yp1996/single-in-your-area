@@ -11,11 +11,17 @@ using System;
 public class ViewportContainer : VBoxContainer {
   Timer replyTimer, scrollTimer, scrollDownTimer;
   PackedScene msgScene;
+  StatManager statManager;
 
   bool themSay = true;
-  enum states {Up, Down, On, Off};
+  bool shouldRefresh = false;
+
+  // To bring down UI
+  enum states {Up, Down, On, Off}; 
   states currentState = states.Off;
-  float stepSize = 5.0f;
+  float stepSize = 5.0f; 
+
+
   int messageAt = 0;
 
   public override void _Ready() {
@@ -23,14 +29,18 @@ public class ViewportContainer : VBoxContainer {
     GD.Print("VC Init");
     replyTimer = (Timer) GetNode("ReplyTimer");
     scrollTimer = (Timer) GetNode("MoveScrollTimer");
-	scrollDownTimer = (Timer) GetNode("ScrollDownTimer");
+	  scrollDownTimer = (Timer) GetNode("ScrollDownTimer"); // To bring down UI
+    statManager = (StatManager) GetNode("/root/StatManager");
     msgScene = (PackedScene) ResourceLoader.Load("res://Scenes/Chat/Message.tscn");
     doThemSay();
   }
 
   public override void _Process(float delta) {
+
+  // Swiping down to bring UI down logic 
+
 	
-	if (Input.IsActionPressed("right_click")) {
+	if (Input.IsActionPressed("right_click")) {  // TODO: replace with swipe gesture
 		if (currentState == states.Up || currentState == states.Off) {
 			currentState = states.Down;
 			scrollDownTimer.Start();
@@ -46,6 +56,11 @@ public class ViewportContainer : VBoxContainer {
 	} else if (currentState == states.Down) {
 		this.SetPosition(this.GetPosition() + new Vector2(0f, stepSize));
 	}
+
+  // Refresh state to reveal answers if requirements have been fulfilled
+  if (! themSay) {
+   doWeSay();
+  }
   }
 
 
@@ -83,12 +98,13 @@ public class ViewportContainer : VBoxContainer {
   // player gets given options of what to say
   private void doWeSay() {
     string[] optionLabels = MessageLogic.GetOurOptions(messageAt);
+    Requirement[] requirements = MessageLogic.GetOurRequirements(messageAt);
     HBoxContainer answerContainer = (HBoxContainer) GetNode("TextEntry");
     object[] buttonList = answerContainer.GetChildren();
 
     for (int i = 0; i < buttonList.Length; i++) {
       Label answerButton = (Label) buttonList[i];
-      if (i < optionLabels.Length) {
+      if (i < optionLabels.Length && requirements[i].isFulfilled(statManager)) {
         answerButton.Visible = true;
         answerButton.Text = optionLabels[i];
       } else {

@@ -67,6 +67,32 @@ static class MessageLogic {
     "" // Empty string = close
   }};
 
+  static Requirement[][] OUR_REQUIREMENTS = { new Requirement[] {
+   new Requirement()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition("anxiety", 90),
+    new Requirement().addCondition("anxiety", 90, Requirement.RequirementCondition.comparison.Lesser)
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition() // Empty string = close
+  }};
+
   public static string GetTheirMessage(int messageID) {
     return THEIR_MESSAGES[messageID];
   }
@@ -75,5 +101,8 @@ static class MessageLogic {
   }
   public static string GetOurResponse(int messageID, int response) {
     return OUR_RESPONSES[messageID][response];
+  }
+  public static Requirement[] GetOurRequirements(int messageID) {
+    return OUR_REQUIREMENTS[messageID];
   }
 }
