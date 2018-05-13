@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/LargerSmallFont.tres" type="DynamicFont" id=1]
 
 [sub_resource type="GDScript" id=1]
 
@@ -96,7 +96,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 4.0
 margin_right = 172.0
-margin_bottom = 64.0
+margin_bottom = 84.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -113,7 +113,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 172.0
-margin_bottom = 12.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -127,7 +127,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "New Game"
-flat = false
+flat = true
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
@@ -137,9 +137,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 16.0
+margin_top = 21.0
 margin_right = 172.0
-margin_bottom = 28.0
+margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -153,9 +153,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Continue"
-flat = false
+flat = true
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Theme", "custom_fonts", "custom_styles" ]
 
 [node name="Settings" type="Button" parent="VBoxContainer/VBoxContainer" index="2"]
 
@@ -163,9 +163,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 32.0
+margin_top = 42.0
 margin_right = 172.0
-margin_bottom = 44.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -179,7 +179,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Settings"
-flat = false
+flat = true
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
@@ -189,9 +189,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 48.0
+margin_top = 63.0
 margin_right = 172.0
-margin_bottom = 60.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -205,7 +205,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Quit"
-flat = false
+flat = true
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
