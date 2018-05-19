@@ -12,5 +12,5 @@ size = 8
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 1 )
-_sections_unfolded = [ "Font", "Resource", "Settings" ]
+_sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
