@@ -258,5 +258,3 @@ area_mask = 1
 script = ExtResource( 18 )
 
 [connection signal="timeout" from="YSort/Collectibles/SpawnTimer" to="YSort/Collectibles" method="OnSpawnTimerTimeout"]
-
-
