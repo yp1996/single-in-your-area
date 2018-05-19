@@ -20,3 +20,9 @@ C:/Users/Vesta/Documents/single-in-your-area/Single In Your Area/.mono/temp/obj/
 /home/pat/code/godot/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.csproj.CoreCompileInputs.cache
 /home/pat/code/godot/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.dll
 /home/pat/code/godot/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.pdb
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/bin/Tools/Single In Your Area.dll
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/bin/Tools/Single In Your Area.pdb
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.csprojResolveAssemblyReference.cache
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.csproj.CoreCompileInputs.cache
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.dll
+/Users/trevorrecord/Documents/Games/My Games/single-in-your-area/Single In Your Area/.mono/temp/obj/Tools/Single In Your Area.pdb

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/version.png-e39256b546f85e69adfab2c2efbcd306.stex"
+path="res://.import/fishing.png-3addca6b0160d123071c156c1739d345.stex"
 
 [deps]
 
-source_file="res://assets/main_menu/version.png"
-source_md5="a712402803c55afb61657bfa53fb6ba7"
+source_file="res://UI/findr/fishing.png"
+source_md5="cd40a977385b1ec5bda6440ea3317ea5"
 
-dest_files=[ "res://.import/version.png-e39256b546f85e69adfab2c2efbcd306.stex" ]
-dest_md5="e74b70e705e107da9378cc6d33dc0ccc"
+dest_files=[ "res://.import/fishing.png-3addca6b0160d123071c156c1739d345.stex" ]
+dest_md5="c31412dead05328885b33f6af8974a9b"
 
 [params]
 

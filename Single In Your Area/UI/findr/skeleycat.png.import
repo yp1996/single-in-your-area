@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/characters.png-c6a9fe63f07b2b8f6a27e7313e307fb4.stex"
+path="res://.import/skeleycat.png-be6dcb9d602d2ba5446282a49fe1d3a4.stex"
 
 [deps]
 
-source_file="res://assets/main_menu/characters.png"
-source_md5="6a78134c5b7262780350139db7fccfa1"
+source_file="res://UI/findr/skeleycat.png"
+source_md5="760b2c89d96b5647f2c267a0aca7e432"
 
-dest_files=[ "res://.import/characters.png-c6a9fe63f07b2b8f6a27e7313e307fb4.stex" ]
-dest_md5="235271af8149e9b30d3df4d34e2e725c"
+dest_files=[ "res://.import/skeleycat.png-be6dcb9d602d2ba5446282a49fe1d3a4.stex" ]
+dest_md5="3808788a4e75306d585e4e4550f1cd5a"
 
 [params]
 

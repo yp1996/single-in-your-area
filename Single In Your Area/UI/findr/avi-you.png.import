@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/label_new_game.png-d000a60db6f3a9209c6403db1a7d060e.stex"
+path="res://.import/avi-you.png-1fea2b96eed94289681b643007b6e550.stex"
 
 [deps]
 
-source_file="res://assets/main_menu/label_new_game.png"
-source_md5="8e3273b5f582bb2b38f848e5f9f20e27"
+source_file="res://UI/findr/avi-you.png"
+source_md5="e42f71288ef4edd9e773b5cadd196055"
 
-dest_files=[ "res://.import/label_new_game.png-d000a60db6f3a9209c6403db1a7d060e.stex" ]
-dest_md5="8fb29385f8139b16519e7c75a8dfda0d"
+dest_files=[ "res://.import/avi-you.png-1fea2b96eed94289681b643007b6e550.stex" ]
+dest_md5="f9998349699a3578fb0212426f36c5d7"
 
 [params]
 

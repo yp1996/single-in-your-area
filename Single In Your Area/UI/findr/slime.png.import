@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/label_continue.png-188d51bc94001165f7a013eae491bb24.stex"
+path="res://.import/slime.png-48ff0aa56d0d12e1485329f5419e9e3d.stex"
 
 [deps]
 
-source_file="res://assets/main_menu/label_continue.png"
-source_md5="dc8708086c3f7eed7a7a2d61e7fc6489"
+source_file="res://UI/findr/slime.png"
+source_md5="3e943ce6af3938d2d99f9e030ea6955d"
 
-dest_files=[ "res://.import/label_continue.png-188d51bc94001165f7a013eae491bb24.stex" ]
-dest_md5="e38a670a171bc8159c9aed39a0a54067"
+dest_files=[ "res://.import/slime.png-48ff0aa56d0d12e1485329f5419e9e3d.stex" ]
+dest_md5="a4c97af630da043d7e57f4d2d0a9b142"
 
 [params]
 
