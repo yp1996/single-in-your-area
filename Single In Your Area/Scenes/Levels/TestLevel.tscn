@@ -34,7 +34,7 @@ render_priority = 0
 shader = ExtResource( 9 )
 shader_param/saturation = null
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
