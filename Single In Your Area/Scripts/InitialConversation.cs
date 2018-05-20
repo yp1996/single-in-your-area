@@ -22,7 +22,6 @@ Message(
         "Just alone in my room. Thinking about how meaningless existence is, how much I wish I could fucking kill myself rn.")
   )
 ),
-/*
 Message(
   "Haha okay", Replies(
     Reply("Be a gentleman",
@@ -63,7 +62,6 @@ Message (
             "TBH I'm just happy to be talking to someone. I've been in my room all week. I have no friends. I'm so lonely. Please don't leave.")
   )
 ),
-*/
 Message (
   "I'm thinking of hitting up the mall later... meet me there? I'm on my way.",
   Replies(CLOSE_FINDR)
