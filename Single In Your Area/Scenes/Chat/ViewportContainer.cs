@@ -14,12 +14,12 @@ public class ViewportContainer : VBoxContainer {
   StatManager statManager;
 
   bool themSay = true;
-  bool shouldRefresh = false;
+  //bool shouldRefresh = false;
 
   // To bring down UI
-  enum states {Up, Down, On, Off}; 
+  enum states {Up, Down, On, Off};
   states currentState = states.Off;
-  float stepSize = 5.0f; 
+  float stepSize = 5.0f;
 
 
   int messageAt = 0;
@@ -37,9 +37,9 @@ public class ViewportContainer : VBoxContainer {
 
   public override void _Process(float delta) {
 
-  // Swiping down to bring UI down logic 
+  // Swiping down to bring UI down logic
 
-	
+
 	if (Input.IsActionPressed("right_click")) {  // TODO: replace with swipe gesture
 		if (currentState == states.Up || currentState == states.Off) {
 			currentState = states.Down;
@@ -50,7 +50,7 @@ public class ViewportContainer : VBoxContainer {
 			scrollDownTimer.Start();
 		}
 	}
-	
+
 	if (currentState == states.Up) {
 		this.SetPosition(this.GetPosition() - new Vector2(0f, stepSize));
 	} else if (currentState == states.Down) {
@@ -97,16 +97,15 @@ public class ViewportContainer : VBoxContainer {
 
   // player gets given options of what to say
   private void doWeSay() {
-    string[] optionLabels = MessageLogic.GetOurOptions(messageAt);
-    Requirement[] requirements = MessageLogic.GetOurRequirements(messageAt);
+    ChatReply[] replies = MessageLogic.GetOurAvailableReplies(messageAt, statManager);
     HBoxContainer answerContainer = (HBoxContainer) GetNode("TextEntry");
     object[] buttonList = answerContainer.GetChildren();
 
     for (int i = 0; i < buttonList.Length; i++) {
       Label answerButton = (Label) buttonList[i];
-      if (i < optionLabels.Length && requirements[i].isFulfilled(statManager)) {
+      if (i < replies.Length) {
         answerButton.Visible = true;
-        answerButton.Text = optionLabels[i];
+        answerButton.Text = replies[i].buttonText();
       } else {
         answerButton.Visible = false;
       }
@@ -182,6 +181,3 @@ public class ViewportContainer : VBoxContainer {
     }
   }
 }
-
-
-
