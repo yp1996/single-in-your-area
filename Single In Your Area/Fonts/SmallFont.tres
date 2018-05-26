@@ -1,12 +1,16 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Fonts/small_font.ttf" type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=1]
+
+resource_local_to_scene = true
+font_path = "res://Fonts/C64_Pro-STYLE.ttf"
+_sections_unfolded = [ "Resource" ]
 
 [resource]
 
 size = 8
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 1 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+font_data = SubResource( 1 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 

@@ -2,17 +2,14 @@
 TODO:
  - Timing for responses?
  - typing / read status indicator?
- - Make font smaller
  - Avatar images
- - clean up message UI
- - Shorter message options.
  - Top of App UI.
 */
 using Godot;
 using System;
 
 public class ViewportContainer : VBoxContainer {
-  Timer timer;
+  Timer replyTimer, scrollTimer;
   PackedScene msgScene;
 
   bool themSay = true;
@@ -21,7 +18,8 @@ public class ViewportContainer : VBoxContainer {
   public override void _Ready() {
     // Initialization here
     GD.Print("VC Init");
-    timer = (Timer) GetNode("Timer");
+    replyTimer = (Timer) GetNode("ReplyTimer");
+    scrollTimer = (Timer) GetNode("MoveScrollTimer");
     msgScene = (PackedScene) ResourceLoader.Load("res://Scenes/Chat/Message.tscn");
     doThemSay();
   }
@@ -30,7 +28,7 @@ public class ViewportContainer : VBoxContainer {
   private void addMessage(string text, bool isPlayer) {
     GD.Print("Adding messages...");
     Message msg = (Message) msgScene.Instance();
-    GetNode("Container/MessageList").AddChild(msg);
+    GetNode("Panel/ScrollContainer/MessageList").AddChild(msg);
     msg.setMessage(text);
     msg.setIsPlayer(isPlayer);
   }
@@ -47,11 +45,12 @@ public class ViewportContainer : VBoxContainer {
   private void doThemSay() {
     string messageText = MessageLogic.GetTheirMessage(messageAt);
     Message msg = (Message) msgScene.Instance();
-    GetNode("Container/MessageList").AddChild(msg);
+    GetNode("Panel/ScrollContainer/MessageList").AddChild(msg);
     msg.setMessage(messageText);
     msg.setIsPlayer(false);
     themSay = false;
     setAnswerVisibility(true);
+    forceBottomScroll();
 
     // Add delay?
     doWeSay();
@@ -78,16 +77,27 @@ public class ViewportContainer : VBoxContainer {
   private void doWeRespond(int option) {
     string ourResponse = MessageLogic.GetOurResponse(messageAt, option);
 
+    if (ourResponse == "") {
+      GD.Print("TODO: Close the app back up again");
+      return;
+    }
+
     Message msg = (Message) msgScene.Instance();
-    GetNode("Container/MessageList").AddChild(msg);
+    GetNode("Panel/ScrollContainer/MessageList").AddChild(msg);
     msg.setMessage(ourResponse);
     msg.setIsPlayer(true);
     themSay = true;
     messageAt++;
+    forceBottomScroll();
 
     setAnswerVisibility(false);
-    timer.WaitTime = 5;
-    timer.Start();
+    replyTimer.WaitTime = 5;
+    replyTimer.Start();
+  }
+
+  private void forceBottomScroll() {
+    scrollTimer.WaitTime = 0.001f;
+    scrollTimer.Start();
   }
 
 
@@ -104,8 +114,16 @@ public class ViewportContainer : VBoxContainer {
   private void _on_Answer3_gui_input(Godot.Object ev) {
     replyIfTouchUp(ev, 2);
   }
-  private void _on_Timer_timeout() {
+  private void _on_ReplyTimer_timeout() {
     doThemSay();
+  }
+  private void _on_MoveScrollTimer_timeout() {
+    ScrollContainer container = (ScrollContainer) GetNode("Panel/ScrollContainer");
+    VBoxContainer messageList = (VBoxContainer) GetNode("Panel/ScrollContainer/MessageList");
+    float overlap = messageList.RectSize.y - container.RectSize.y + 12;
+    if (overlap > 0) {
+      container.ScrollVertical = (int) overlap;
+    }
   }
 
   private void replyIfTouchUp(Godot.Object ev, int option) {
