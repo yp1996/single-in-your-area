@@ -32,7 +32,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border" ]
 
-[node name="Screen" type="Node2D"]
+[node name="Screen" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 

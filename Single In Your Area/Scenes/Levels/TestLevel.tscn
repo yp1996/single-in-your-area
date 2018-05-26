@@ -61,7 +61,7 @@ tracks/0/keys = {
 render_priority = 0
 shader = ExtResource( 15 )
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
@@ -258,3 +258,5 @@ area_mask = 1
 script = ExtResource( 18 )
 
 [connection signal="timeout" from="YSort/Collectibles/SpawnTimer" to="YSort/Collectibles" method="OnSpawnTimerTimeout"]
+
+
