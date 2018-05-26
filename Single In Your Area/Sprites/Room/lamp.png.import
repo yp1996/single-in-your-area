@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bed.png-40dd8bbd8daac415c494be88ee2110a8.stex"
+path="res://.import/lamp.png-624c837e630b558c0d863f276b0794b2.stex"
 
 [deps]
 
-source_file="res://Sprites/Room/bed.png"
-source_md5="10b9003783e4c6b4bc886d4fbf1c216b"
+source_file="res://Sprites/Room/lamp.png"
+source_md5="63b2f17b277e257831e868348ef2545f"
 
-dest_files=[ "res://.import/bed.png-40dd8bbd8daac415c494be88ee2110a8.stex" ]
-dest_md5="7c9625f7cefa1afdf94e0d98b7b5c771"
+dest_files=[ "res://.import/lamp.png-624c837e630b558c0d863f276b0794b2.stex" ]
+dest_md5="1cbeefc43ec29d8a09b854441ecbec3e"
 
 [params]
 

@@ -1,12 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/Character/output-0.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -30,11 +25,12 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
 position = Vector2( -2.38419e-07, 4.16129 )
 scale = Vector2( 1.53846, 1.98759 )
-shape = SubResource( 1 )
+build_mode = 0
+polygon = PoolVector2Array( 2.47128, 1.54082, -1.74817, 2.6295, -3.77975, 1.66177, -4.87375, -4.50734, -0.810516, -7.89432, 3.72147, -4.38638 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
