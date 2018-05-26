@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Xanax2.png-ae9971b4d50fb55952c05df44dab7abb.stex"
+path="res://.import/roomTile.png-90f5e6420eb40da1324c6a2d9a8593c2.stex"
 
 [deps]
 
-source_file="res://Sprites/Xanax2.png"
-source_md5="2ad548751399ecdf34cfe082009ffa1f"
+source_file="res://Sprites/Room/roomTile.png"
+source_md5="f33b182f1c88fcef435bad107f1dfab9"
 
-dest_files=[ "res://.import/Xanax2.png-ae9971b4d50fb55952c05df44dab7abb.stex" ]
-dest_md5="25a0175f5cc82932c332c6370cbf5fcb"
+dest_files=[ "res://.import/roomTile.png-90f5e6420eb40da1324c6a2d9a8593c2.stex" ]
+dest_md5="7657a3d8caabb9522edb86c9b1fee87e"
 
 [params]
 

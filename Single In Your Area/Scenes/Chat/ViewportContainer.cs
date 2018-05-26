@@ -159,11 +159,11 @@ public class ViewportContainer : VBoxContainer {
   }
   private void _on_ScrollDownTimer_timeout()
   {
-	if (currentState == states.Down) {
-		currentState = states.On;
-	} else if (currentState == states.Up) {
-		currentState = states.Off;
-	}
+    if (currentState == states.Down) {
+      currentState = states.On;
+    } else if (currentState == states.Up) {
+      currentState = states.Off;
+    }
   }
   private void _on_MoveScrollTimer_timeout() {
     ScrollContainer container = (ScrollContainer) GetNode("Panel/ScrollContainer");

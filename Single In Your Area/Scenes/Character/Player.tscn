@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Player.cs" type="Script" id=1]
-[ext_resource path="res://Sprites/sprite.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Character/output-0.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -41,7 +41,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
-_sections_unfolded = [ "Animation", "Offset" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 

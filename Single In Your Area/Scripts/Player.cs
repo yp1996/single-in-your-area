@@ -10,7 +10,7 @@ public class Player : KinematicBody2D
 	public bool isMoving = false;
 	int currentFrame = 0;
 	const int maxFrames = 4;
-	enum Direction: int {Left = 4, Right = 8, Up = 0, Down = 12}; // value is number of frame
+	enum Direction: int {Left = 12, Right = 8, Up = 0, Down = 4}; // value is number of frame
 
 	int stepsTaken = 0;
 	int anxietyModifier = 1; // how fast anxiety increases

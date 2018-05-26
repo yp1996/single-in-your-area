@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Xanax1.png-4ee570c0a0729104d571886add1c6ce7.stex"
+path="res://.import/output-5.png-9919865e23faa86bbeec7e7c93614888.stex"
 
 [deps]
 
-source_file="res://Sprites/Xanax1.png"
-source_md5="ba8b7632126eb1632e0b79fc8b2cd504"
+source_file="res://Sprites/Character/output-5.png"
+source_md5="613f00d74a97a1118f05512db546c6f5"
 
-dest_files=[ "res://.import/Xanax1.png-4ee570c0a0729104d571886add1c6ce7.stex" ]
-dest_md5="ae99ff6bc688a2c2d5ab5dc7e2daeb25"
+dest_files=[ "res://.import/output-5.png-9919865e23faa86bbeec7e7c93614888.stex" ]
+dest_md5="2e1bed64050aa9426bef149a13eb1435"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -30,7 +30,7 @@ public class CollectibleSpawner : Node2D
 		Random rnd = new Random();
 		int numSpawned = rnd.Next(minSpawnable, maxSpawnable);
 		for (int i = 0; i < numSpawned; i++) {
-			int type = rnd.Next(0, 1);
+			int type = rnd.Next(0, 2);
 			if (type == 0) {
 				FentaLeanCollectible fc = (FentaLeanCollectible) f.Instance();
 				AddChild(fc);
