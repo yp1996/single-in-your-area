@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/Character/output-0.png" type="Texture" id=2]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 470, 270 )
 scale = Vector2( 0.65625, 0.65625 )
@@ -30,7 +30,7 @@ blend_times = [  ]
 position = Vector2( -2.38419e-07, 4.16129 )
 scale = Vector2( 1.53846, 1.98759 )
 build_mode = 0
-polygon = PoolVector2Array( 2.47128, 1.54082, -1.74817, 2.6295, -3.77975, 1.66177, -4.87375, -4.50734, -0.810516, -7.89432, 3.72147, -4.38638 )
+polygon = PoolVector2Array( 4.53955, 2.06406, 2.29388, 3.29529, -3.32025, 3.078, -6.03372, 2.28133, -6.50159, -5.39575, -2.75883, -9.08943, 1.35822, -8.94458, 4.91382, -5.32332 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
