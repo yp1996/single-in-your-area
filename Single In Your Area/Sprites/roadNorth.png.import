@@ -10,7 +10,7 @@ source_file="res://Sprites/roadNorth.png"
 source_md5="6afc6a3a6e166475004d332b23d74443"
 
 dest_files=[ "res://.import/roadNorth.png-e14c978193bba6a92e3ad2b471373c09.stex" ]
-dest_md5="d228fb456913ac0b6b5af4bdafe97c82"
+dest_md5="4d90edce192e464059318d1080337793"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

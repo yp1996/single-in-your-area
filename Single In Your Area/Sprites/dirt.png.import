@@ -10,7 +10,7 @@ source_file="res://Sprites/dirt.png"
 source_md5="ef991df622e8a6e6ceae723cacf2f83a"
 
 dest_files=[ "res://.import/dirt.png-cc1f572aa3f938ae2d8896503dd0fe34.stex" ]
-dest_md5="80380bf43d38be9be9242a1ca3f55223"
+dest_md5="f5e96189cf33bd01f849504cbe3a9eeb"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

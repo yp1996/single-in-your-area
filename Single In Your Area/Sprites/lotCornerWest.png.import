@@ -10,7 +10,7 @@ source_file="res://Sprites/lotCornerWest.png"
 source_md5="9db19191a7f7bd25848a151af264979e"
 
 dest_files=[ "res://.import/lotCornerWest.png-c9790c2ac00e1e91fef0ce16798f040d.stex" ]
-dest_md5="c92113ecfb83bd0c8c2299f8b7a9deaa"
+dest_md5="87faeec90fa4eba800f0c924a139cd54"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

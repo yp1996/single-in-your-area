@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Chat/Message.cs" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/avi-love.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Sprites/avi-you.png" type="Texture" id=4]
 
 [node name="Message" type="HBoxContainer"]
 
@@ -22,13 +23,31 @@ alignment = 0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "custom_constants" ]
 
-[node name="TheirAvatar" type="TextureRect" parent="." index="0"]
+[node name="LeftPadding" type="Container" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 30.0
+margin_right = 6.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 6, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="TheirAvatar" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_right = 40.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -42,16 +61,16 @@ expand = true
 stretch_mode = 5
 _sections_unfolded = [ "Rect" ]
 
-[node name="Label" type="Label" parent="." index="1"]
+[node name="Label" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 34.0
-margin_top = 12.0
-margin_right = 146.0
-margin_bottom = 18.0
+margin_left = 44.0
+margin_top = 11.0
+margin_right = 136.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -59,23 +78,22 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.788093, 0.198364, 0.976562, 1 )
-custom_colors/font_color_shadow = Color( 0.6, 0.6, 0.6, 1 )
+custom_colors/font_color = Color( 0.402344, 0.00785828, 0.39618, 1 )
 text = "WOW"
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Size Flags", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="MyAvatar" type="TextureRect" parent="." index="2"]
+[node name="MyAvatar" type="TextureRect" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 150.0
-margin_right = 180.0
+margin_left = 140.0
+margin_right = 170.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -84,9 +102,27 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="RightPadding" type="Container" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 174.0
+margin_right = 180.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 6, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
 

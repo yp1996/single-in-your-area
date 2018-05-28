@@ -27,8 +27,6 @@ public class NavPoint : Node2D
 			
 			clickPosition = GetGlobalMousePosition();
             this.SetPosition(clickPosition);
-			
-        // MoveAndSlide(GetGlobalMousePosition() - GetPosition());
 		}       
    }
 	

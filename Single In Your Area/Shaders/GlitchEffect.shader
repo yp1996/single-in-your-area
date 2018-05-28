@@ -59,10 +59,17 @@ void fragment() {
 	}
 	
     col.r = rightRed.r;
-    col.g = leftGreen.g;
+    //col.g = leftGreen.g;
     col.b = diagBlue.b;
 
-	float distortion = 1.0 - texture(noise_texture, UV + displUV).r*glitch_intensity*0.5;
+	// NOISE 
+	
+	float rand_t = rand(UV.x + UV.y + TIME);
+	float new_rand_t = 0.0;
+	if (rand_t <= new_glitch_intensity*0.5) {
+		new_rand_t = rand(TIME);
+	}
+	float distortion = 1.0 - texture(noise_texture, UV + displUV + new_rand_t).r*glitch_intensity*0.5;
 	
     // Assign the color to the output
     COLOR = vec4(col.rgb * distortion, finalAlpha);

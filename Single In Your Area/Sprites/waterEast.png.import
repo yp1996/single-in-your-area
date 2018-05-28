@@ -10,7 +10,7 @@ source_file="res://Sprites/waterEast.png"
 source_md5="89ad1ec956792478d5891ca283c881d8"
 
 dest_files=[ "res://.import/waterEast.png-a2baf31a7fcd6de92080ae9e0f6ca7ef.stex" ]
-dest_md5="1fcce768d5d634a15cd073e5dbf41d30"
+dest_md5="0e6e9b37f186b49951a12803a40128e0"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

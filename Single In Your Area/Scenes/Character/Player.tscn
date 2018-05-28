@@ -3,8 +3,6 @@
 [ext_resource path="res://Scripts/Player.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/sprite.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -73,11 +71,20 @@ editor_draw_drag_margin = false
 [node name="Timer" type="Timer" parent="." index="4"]
 
 process_mode = 0
-wait_time = 0.1
+wait_time = 0.2
 one_shot = false
 autostart = true
 _sections_unfolded = [ "Pause" ]
 
+[node name="PassOutTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 7.0
+one_shot = true
+autostart = false
+
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+
+[connection signal="timeout" from="PassOutTimer" to="." method="OnPassOutTimeout"]
 
 

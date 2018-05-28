@@ -10,7 +10,7 @@ source_file="res://Sprites/roadCornerES.png"
 source_md5="87f2f6e91eb404df143a2a3c884344a2"
 
 dest_files=[ "res://.import/roadCornerES.png-212140eae39ce23523e5fa26fa50e7b1.stex" ]
-dest_md5="94a3e8cd2a975869fbc1b3ca8322a09b"
+dest_md5="633132899b51d333bf909225588560db"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

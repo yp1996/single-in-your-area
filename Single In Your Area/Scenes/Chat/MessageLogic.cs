@@ -2,15 +2,17 @@ using Godot;
 using System;
 
 static class MessageLogic {
+
   static string[] THEIR_MESSAGES = {
     "Hey there!",
     "Nm, just chillin. Hbu?",
     "Haha okay",
     "Want to cam? Follow this link http://dvdmrn.xyz ;)  uwu\n\n"
       + "Jk, was just messing w u rawr xD\n"
-      + "I’m so random!!!!!!11!1 >w<",
+      + "I'm so random!!!!!!11!1 >w<",
     "Ah! No but u can follow me on DeviantArt",
-    "Uh, thanks I guess?"
+    "Uh, thanks I guess?",
+    "I'm thinking of hitting up the mall later... meet me there? I'm on my way.",
   };
 
   static string[][] OUR_OPTIONS = { new string[] {
@@ -32,33 +34,63 @@ static class MessageLogic {
     "Tell them they look just like your parent",
     "Tell them you used to like that art style"
   }, new string[] {
-    "Ask them what they’re doing later (thirsty)",
-    "Ask them what they’re doing later (play it cool)",
-    "Ask them what they’re doing later (lonely)"
+    "Act thirsty",
+    "Play it cool",
+    "Appear lonely"
+  }, new string[] {
+    "Close Findr"
   }};
 
   static string[][] OUR_RESPONSES = { new string[] {
-    "Hey what’s up?"
+    "Hey what's up?"
   }, new string[] {
     "Having a good time talking to you ;)",
     "Freaking out bc i thought everyone was dead",
     "Just alone in my room. Thinking about how meaningless existence is, how much I wish I could fucking kill myself rn."
   }, new string[] {
-    "*sweats nervously* so uh, how is m’lady/lord feeling today? Would they care to make my acquaintance? *tips fedora*",
-    "Haha I mean it’s cool everything's cool nice weather we got today right? It hasn’t been this nice in a while I think I’m gonna go out for a walk",
-    "I saw that you like $ui$ide Boy$, I’m on their new EP. I make post-clout emo soundcloud beats."
+    "*sweats nervously* so uh, how is m'lady/lord feeling today? Would they care to make my acquaintance? *tips fedora*",
+    "Haha I mean it's cool everything's cool nice weather we got today right? It hasn't been this nice in a while I think I'm gonna go out for a walk",
+    "I saw that you like $ui$ide Boy$, I'm on their new EP. I make post-clout emo soundcloud beats."
   }, new string[] {
     "Omg do you have Myspace?",
     "Do u like anime?",
-    "I’d like to add you to my professional network on LinkedIn."
+    "I'd like to add you to my professional network on LinkedIn."
   }, new string[] {
-    "Woa this is so cool! The way you draw women is so subversive - those biceps! She looks like she’s on HGH. I want those thighs to crush my face.",
+    "Woa this is so cool! The way you draw women is so subversive - those biceps! She looks like she's on HGH. I want those thighs to crush my face.",
     "dude you look so much like my dad...",
     "I used to like that art style"
   }, new string[] {
     "NEEDS TEXT",
     "U heard of music before?",
-    "TBH I’m just happy to be talking to someone. I’ve been in my room all week. I have no friends. I’m so lonely. Please don't leave."
+    "TBH I'm just happy to be talking to someone. I've been in my room all week. I have no friends. I'm so lonely. Please don't leave."
+  }, new string[] {
+    "" // Empty string = close
+  }};
+
+  static Requirement[][] OUR_REQUIREMENTS = { new Requirement[] {
+   new Requirement()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition("anxiety", 90),
+    new Requirement().addCondition("anxiety", 90, Requirement.RequirementCondition.comparison.Lesser)
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition(),
+    new Requirement().addCondition(),
+    new Requirement().addCondition()
+  }, new Requirement[] {
+    new Requirement().addCondition() // Empty string = close
   }};
 
   public static string GetTheirMessage(int messageID) {
@@ -69,5 +101,8 @@ static class MessageLogic {
   }
   public static string GetOurResponse(int messageID, int response) {
     return OUR_RESPONSES[messageID][response];
+  }
+  public static Requirement[] GetOurRequirements(int messageID) {
+    return OUR_REQUIREMENTS[messageID];
   }
 }

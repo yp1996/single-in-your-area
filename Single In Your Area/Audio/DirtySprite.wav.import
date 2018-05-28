@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DirtySprite.wav-55745590ca7c0d94fb0015153114e926.sample"
+
+[deps]
+
+source_file="res://Audio/DirtySprite.wav"
+source_md5="bf292194549a66b66b8a800209c2b3a3"
+
+dest_files=[ "res://.import/DirtySprite.wav-55745590ca7c0d94fb0015153114e926.sample" ]
+dest_md5="95e0cc73791f3035cce8864fcc10a99b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
