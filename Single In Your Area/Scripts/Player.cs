@@ -95,6 +95,8 @@ public class Player : KinematicBody2D
 			GD.Print(body.GetParent().GetParent().GetParent().GetName());
 			((Collectible) body.GetParent().GetParent()).Consume();
 			((Node2D) body.GetParent()).QueueFree();
+		} else if (body.GetName().Contains("SceneSwitcher")) {
+			((SceneSwitcher) body).SwitchScene();
 		}
 	}
 	

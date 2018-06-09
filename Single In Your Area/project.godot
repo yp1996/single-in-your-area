@@ -11,12 +11,13 @@ config_version=3
 [application]
 
 config/name="Single In Your Area"
-run/main_scene="res://Scenes/Levels/TestLevel.tscn"
+run/main_scene="res://Scenes/Levels/Bedroom.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 StatManager="*res://Scripts/StatManager.cs"
+Global="*res://Scripts/Global.cs"
 
 [display]
 

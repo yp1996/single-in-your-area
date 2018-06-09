@@ -57,6 +57,7 @@
     <Compile Include="Scenes\Chat\MessageLogic.cs" />
     <Compile Include="Scenes\Chat\ViewportContainer.cs" />
     <Compile Include="Scripts\GlitchEffectShaderController.cs" />
+    <Compile Include="Scripts\Global.cs" />
     <Compile Include="Scripts\LabelScript.cs" />
     <Compile Include="Scripts\ModulateMusic.cs" />
     <Compile Include="Scripts\NavPoint.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\Requirement.cs" />
     <Compile Include="Scripts\SaturationShaderController.cs" />
+    <Compile Include="Scripts\SceneSwitcher.cs" />
     <Compile Include="Scripts\StatManager.cs" />
     <Compile Include="Scripts\XanaxCollectible.cs" />
   </ItemGroup>
