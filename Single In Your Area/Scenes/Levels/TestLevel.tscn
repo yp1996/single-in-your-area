@@ -17,6 +17,7 @@
 [ext_resource path="res://Sprites/noise.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Chat/ChatMain.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=18]
 
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -206,6 +207,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
