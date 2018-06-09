@@ -27,7 +27,7 @@ blend_times = [  ]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( -2.38419e-07, 4.16129 )
+position = Vector2( 0, 4.16125 )
 scale = Vector2( 1.53846, 1.98759 )
 build_mode = 0
 polygon = PoolVector2Array( 4.53955, 2.06406, 2.29388, 3.29529, -3.32025, 3.078, -6.03372, 2.28133, -6.50159, -5.39575, -2.75883, -9.08943, 1.35822, -8.94458, 4.91382, -5.32332 )

@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/Room/poster.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Room/clothesonfloort.png" type="Texture" id=8]
 
-[node name="Node" type="Node2D"]
+[node name="Node" type="Node2D" index="0"]
 
 [node name="Drawer" type="Sprite" parent="." index="0"]
 
