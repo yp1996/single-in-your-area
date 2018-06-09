@@ -32,7 +32,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border" ]
 
-[node name="Screen" type="Node2D" index="0"]
+[node name="Screen" type="Node2D"]
 
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
@@ -244,7 +244,7 @@ clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags", "custom_constants", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="ReplyTimer" type="Timer" parent="ViewportContainer" index="3"]
 
@@ -278,5 +278,3 @@ autostart = false
 [connection signal="timeout" from="ViewportContainer/MoveScrollTimer" to="ViewportContainer" method="_on_MoveScrollTimer_timeout"]
 
 [connection signal="timeout" from="ViewportContainer/ScrollDownTimer" to="ViewportContainer" method="_on_ScrollDownTimer_timeout"]
-
-
