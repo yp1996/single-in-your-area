@@ -10,7 +10,7 @@ source_file="res://Sprites/hillNorth.png"
 source_md5="99c6a248a349baeb55db309bc738096f"
 
 dest_files=[ "res://.import/hillNorth.png-5428d29b65b98e4c3809a2c0c6ea469b.stex" ]
-dest_md5="9b8ed20ad567bb1516291ba780f7f183"
+dest_md5="964c4d8c47b03b8dfabddd7e6e9624ce"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

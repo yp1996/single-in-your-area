@@ -10,7 +10,7 @@ source_file="res://Sprites/waterWest.png"
 source_md5="d086219bb2ae9736366e43301a23c727"
 
 dest_files=[ "res://.import/waterWest.png-0444894d295301c4ca4e6d2d934e44b2.stex" ]
-dest_md5="4ac4a4d1761f7f9bafefd7660e06fd2a"
+dest_md5="ab48ebe661fbed5d5d6c475eb15b2fbe"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,0 +1,118 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/Room/drawer.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Room/chair2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Room/desk.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Room/door.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Room/bed.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Room/lamp.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Room/poster.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Room/clothesonfloort.png" type="Texture" id=8]
+
+[node name="Node" type="Node2D" index="0"]
+
+[node name="Drawer" type="Sprite" parent="." index="0"]
+
+position = Vector2( 67.6229, 3.03868 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Drawer" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drawer/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7.09899, -11.2137, 13.0057, -1.77321, 12.4813, 9.93999, 7.93586, 13.2616, -13.043, 3.82115, -13.7423, -7.01793 )
+
+[node name="Chair" type="Sprite" parent="." index="1"]
+
+position = Vector2( 39.9786, 0.839343 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Chair" index="0"]
+
+position = Vector2( -0.400762, -0.649987 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chair/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 6.86792, -8.58767, 5.91122, 7.02012, 1.01615, 9.64248, -5.10268, 8.59354, -4.92786, 2.29988, 1.54063, -1.1966, 1.01615, -9.93779 )
+
+[node name="Desk" type="Sprite" parent="." index="2"]
+
+position = Vector2( 47.0382, 28.6144 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Desk" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Desk/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16.9336, -5.49591, -16.584, 11.462, -4.34633, 17.2312, 23.6255, 2.72081, 23.9751, -13.1882, 12.6116, -19.1322 )
+
+[node name="Door" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 4 )
+
+[node name="Bed" type="Sprite" parent="." index="4"]
+
+position = Vector2( -26.5068, 2.05112 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bed" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bed/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 24.6186, 0.962585, 25.4485, 9.13128, 12.5558, 18.445, 4.33906, 19.3191, -19.7866, 9.8786, -18.388, 4.45906, -27.3041, 1.13741, -27.2495, -7.59324, -25.2062, -14.7716, -15.2412, -18.4429 )
+
+[node name="Lamp" type="Sprite" parent="." index="5"]
+
+position = Vector2( -99.5582, 16.8823 )
+texture = ExtResource( 6 )
+
+[node name="Poster" type="Sprite" parent="." index="6"]
+
+texture = ExtResource( 7 )
+
+[node name="Clothes" type="Sprite" parent="." index="7"]
+
+texture = ExtResource( 8 )
+
+

@@ -10,7 +10,7 @@ source_file="res://Sprites/hillCornerSE.png"
 source_md5="f3575208e25f545305384b05d392a9a5"
 
 dest_files=[ "res://.import/hillCornerSE.png-d93f4ef9615e9240c3400c2488f143cb.stex" ]
-dest_md5="d21a7f8d7b49541c8bf909b5a770360c"
+dest_md5="c164cb3a4a4e179a8269161ddf110edf"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

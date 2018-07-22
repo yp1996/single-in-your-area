@@ -1,16 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Player.cs" type="Script" id=1]
-[ext_resource path="res://Sprites/sprite.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Character/output-0.png" type="Texture" id=2]
 
-
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 470, 270 )
 scale = Vector2( 0.65625, 0.65625 )
@@ -32,18 +25,19 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( -2.38419e-07, 4.16129 )
+position = Vector2( 0, 4.16125 )
 scale = Vector2( 1.53846, 1.98759 )
-shape = SubResource( 1 )
+build_mode = 0
+polygon = PoolVector2Array( 4.53955, 2.06406, 2.29388, 3.29529, -3.32025, 3.078, -6.03372, 2.28133, -6.50159, -5.39575, -2.75883, -9.08943, 1.35822, -8.94458, 4.91382, -5.32332 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
-_sections_unfolded = [ "Animation", "Offset" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 
@@ -73,11 +67,20 @@ editor_draw_drag_margin = false
 [node name="Timer" type="Timer" parent="." index="4"]
 
 process_mode = 0
-wait_time = 0.1
+wait_time = 0.2
 one_shot = false
 autostart = true
 _sections_unfolded = [ "Pause" ]
 
+[node name="PassOutTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 7.0
+one_shot = true
+autostart = false
+
 [connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+
+[connection signal="timeout" from="PassOutTimer" to="." method="OnPassOutTimeout"]
 
 

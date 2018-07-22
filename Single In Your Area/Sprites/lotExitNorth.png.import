@@ -10,7 +10,7 @@ source_file="res://Sprites/lotExitNorth.png"
 source_md5="918b1d378e988dff1efdaad16ea8b1eb"
 
 dest_files=[ "res://.import/lotExitNorth.png-7a777c091bfe5214e1fed8216ed122ae.stex" ]
-dest_md5="585329206bb8eddefddbbe9a0aa809e6"
+dest_md5="ced9d90a69d6469e468be49fd7c42abe"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

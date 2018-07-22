@@ -10,7 +10,7 @@ source_file="res://Sprites/bridgeNorth.png"
 source_md5="bb448a55a09f3fe30f8ffa7d6e9a5789"
 
 dest_files=[ "res://.import/bridgeNorth.png-5270e2d3df3ceb8002150ff638b92ec6.stex" ]
-dest_md5="78a09ed4c6d990e2996795fbe1a84273"
+dest_md5="fa0396d59c1fd6718ec0c6bd0b3ab11f"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -10,7 +10,7 @@ source_file="res://Sprites/lotEast.png"
 source_md5="9132eaf554fb041ac7d2eb5d0017f64b"
 
 dest_files=[ "res://.import/lotEast.png-9756afe2be9d5622e6271cf1f0ba6c78.stex" ]
-dest_md5="72b2c49b7efe162683905857b217df66"
+dest_md5="a85a730de5c85f980c67cedb404883ef"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

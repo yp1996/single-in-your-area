@@ -10,7 +10,7 @@ source_file="res://Sprites/hillRoadWest.png"
 source_md5="d98f3b8ef9dce5f5bfb932b4e0d15cd3"
 
 dest_files=[ "res://.import/hillRoadWest.png-4f0562980c9904f644b42326b380ccdb.stex" ]
-dest_md5="47774e696d93c3ec9ee9934f7fd212c9"
+dest_md5="718baf07b397755238bac3e318f25177"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

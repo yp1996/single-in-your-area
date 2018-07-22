@@ -10,7 +10,7 @@ source_file="res://Sprites/lotWest.png"
 source_md5="d5087884cb47651c55362dd1e97e5d04"
 
 dest_files=[ "res://.import/lotWest.png-e1310c662ff7d5a2086053abb6d1b761.stex" ]
-dest_md5="305d0fe280d2ab156011c15b97851ab9"
+dest_md5="73abf67a1ad644dba95e3303a6665406"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

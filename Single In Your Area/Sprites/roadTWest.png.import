@@ -10,7 +10,7 @@ source_file="res://Sprites/roadTWest.png"
 source_md5="e61f690105ad8b2ac7653c3b302e3f8d"
 
 dest_files=[ "res://.import/roadTWest.png-7a3b2e9a89d3820559c8431da14574b6.stex" ]
-dest_md5="fda63676d932859bacc2c5c6411f9e1a"
+dest_md5="5bdf857f74887ff218882cba6050981c"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

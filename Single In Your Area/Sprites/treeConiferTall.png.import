@@ -10,7 +10,7 @@ source_file="res://Sprites/treeConiferTall.png"
 source_md5="645f8a3ea5ecfe00af87dfd4dcae5e1f"
 
 dest_files=[ "res://.import/treeConiferTall.png-bd19dee1c18023a394ddbcedbaa3eea7.stex" ]
-dest_md5="4b974861abef5ae91d53310524b672fe"
+dest_md5="4ca8d2fe09bb0b89525e546b5c981b8a"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

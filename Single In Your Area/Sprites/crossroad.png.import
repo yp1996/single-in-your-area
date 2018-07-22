@@ -10,7 +10,7 @@ source_file="res://Sprites/crossroad.png"
 source_md5="5eda3d1e522abdd64a8b0595d2e12c4c"
 
 dest_files=[ "res://.import/crossroad.png-b7c695925e32b2d79c70b50ce900a840.stex" ]
-dest_md5="5cb82c32421d8f0fec11231f12c69b94"
+dest_md5="594895944715a5b48e245abe29a05510"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
