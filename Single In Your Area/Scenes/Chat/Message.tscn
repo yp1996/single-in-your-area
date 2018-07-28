@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Chat/Message.cs" type="Script" id=1]
-[ext_resource path="res://Sprites/avi-love.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/UI/avi-love.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Sprites/avi-you.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/UI/avi-you.png" type="Texture" id=4]
+
 
 [node name="Message" type="HBoxContainer"]
 

@@ -1,17 +1,23 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/NavPoint.cs" type="Script" id=1]
-[ext_resource path="res://Sprites/navpoint.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/UI/navpoint.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/navpoint.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Character/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/CollectibleSpawner.cs" type="Script" id=5]
 [ext_resource path="res://Scripts/LabelScript.cs" type="Script" id=6]
 [ext_resource path="res://Scenes/GUI/DialogBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=8]
-[ext_resource path="res://Sprites/noise.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/FX/noise.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Chat/ChatMain.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=12]
+
+
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 
