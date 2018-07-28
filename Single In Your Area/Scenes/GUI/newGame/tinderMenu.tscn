@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/GUI/newGame/tinderMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/LargerSmallFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/findr/sprites_main_icon.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://UI/findr/findr.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/TinderMatch.cs" type="Script" id=6]
+[ext_resource path="res://UI/findr/dead.png" type="Texture" id=7]
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="MainMenu" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -18,29 +21,28 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Grow Direction", "Margin", "Rect" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Transform", "Visibility", "Z Index", "custom_constants" ]
 
 [node name="Page1" type="VBoxContainer" parent="." index="0"]
 
-editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 184.0
-margin_bottom = 320.0
+margin_right = 180.0
+margin_bottom = 321.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 0
 size_flags_vertical = 1
 custom_constants/separation = 20
 alignment = 1
-_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "Visibility", "custom_constants" ]
+_sections_unfolded = [ "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Visibility", "custom_constants" ]
 
 [node name="Label" type="Label" parent="Page1" index="0"]
 
@@ -49,21 +51,21 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 115.0
-margin_right = 176.0
+margin_right = 180.0
 margin_bottom = 168.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 13
 custom_fonts/font = ExtResource( 2 )
 text = "Welcome to Single in your Area! Use this App to find hot singles."
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
 
 [node name="NextButton" type="Button" parent="Page1" index="1"]
 
@@ -72,15 +74,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 188.0
-margin_right = 176.0
+margin_right = 180.0
 margin_bottom = 205.0
+grow_horizontal = 0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 13
 custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -89,27 +92,31 @@ group = null
 text = "Awww yiss"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_fonts" ]
 
 [node name="Page2" type="VBoxContainer" parent="." index="1"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 184.0
-margin_bottom = 320.0
+margin_left = 2.0
+margin_right = 182.0
+margin_bottom = 349.0
+grow_horizontal = 0
+grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 8
 alignment = 0
-_sections_unfolded = [ "Visibility", "custom_constants" ]
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label2" type="Label" parent="Page2" index="0"]
 
@@ -117,22 +124,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 176.0
+margin_right = 180.0
 margin_bottom = 11.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 text = "Your Profile"
 align = 1
-autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="Page2" index="1"]
 
@@ -141,15 +147,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 15.0
-margin_right = 176.0
+margin_right = 180.0
 margin_bottom = 45.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 use_top_left = false
+_sections_unfolded = [ "Hint", "Rect" ]
 
 [node name="TextureRect" type="TextureRect" parent="Page2/CenterContainer" index="0"]
 
@@ -157,18 +164,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 73.0
-margin_right = 103.0
+margin_left = 75.0
+margin_right = 105.0
 margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 texture = ExtResource( 3 )
 stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Grow Direction", "Rect" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Size Flags" ]
 
 [node name="Your Name" type="Label" parent="Page2" index="2"]
 
@@ -177,21 +184,21 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 49.0
-margin_right = 176.0
-margin_bottom = 55.0
+margin_right = 180.0
+margin_bottom = 57.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Your Name:"
 align = 3
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Hint", "Margin", "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="LineEdit" type="LineEdit" parent="Page2" index="3"]
 
@@ -199,22 +206,23 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 59.0
-margin_right = 176.0
-margin_bottom = 83.0
+margin_top = 61.0
+margin_right = 180.0
+margin_bottom = 85.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 focus_mode = 2
 context_menu_enabled = true
 placeholder_alpha = 0.6
-caret_blink = false
+caret_blink = true
 caret_blink_speed = 0.65
 caret_position = 0
+_sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="CheckButton" type="CheckButton" parent="Page2" index="4"]
 
@@ -222,16 +230,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 87.0
-margin_right = 176.0
-margin_bottom = 127.0
+margin_top = 89.0
+margin_right = 180.0
+margin_bottom = 129.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -240,7 +248,7 @@ group = null
 text = "Gender"
 flat = false
 align = 0
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_fonts" ]
 
 [node name="YourPersonality" type="Label" parent="Page2" index="5"]
 
@@ -248,15 +256,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 131.0
-margin_right = 176.0
-margin_bottom = 142.0
+margin_top = 133.0
+margin_right = 180.0
+margin_bottom = 144.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 text = "Your Personality:"
 autowrap = true
@@ -271,39 +279,39 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 146.0
-margin_right = 176.0
-margin_bottom = 152.0
+margin_top = 148.0
+margin_right = 180.0
+margin_bottom = 156.0
+grow_horizontal = 0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
-text = "How many babies do u want?"
+text = "How many babies?"
 align = 3
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="babiesSelects" type="HBoxContainer" parent="Page2" index="7"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 176.0
-margin_bottom = 180.0
+margin_top = 160.0
+margin_right = 180.0
+margin_bottom = 184.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
@@ -313,7 +321,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 48.0
+margin_right = 56.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -321,7 +329,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -330,7 +338,7 @@ group = null
 text = "None"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CheckBox2" type="CheckBox" parent="Page2/babiesSelects" index="1"]
 
@@ -338,8 +346,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 52.0
-margin_right = 85.0
+margin_left = 60.0
+margin_right = 95.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -347,7 +355,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -356,7 +364,7 @@ group = null
 text = "1"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CheckBox3" type="CheckBox" parent="Page2/babiesSelects" index="2"]
 
@@ -364,8 +372,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 89.0
-margin_right = 122.0
+margin_left = 99.0
+margin_right = 134.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -373,7 +381,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -382,7 +390,7 @@ group = null
 text = "7"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CheckButton2" type="CheckButton" parent="Page2" index="8"]
 
@@ -390,43 +398,43 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 184.0
-margin_right = 176.0
-margin_bottom = 224.0
+margin_top = 188.0
+margin_right = 180.0
+margin_bottom = 228.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Do you have a puppo?"
+text = "Puppo or no?"
 flat = true
 align = 0
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_fonts" ]
 
 [node name="angryDog" type="VBoxContainer" parent="Page2" index="9"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 228.0
-margin_right = 176.0
-margin_bottom = 254.0
+margin_top = 232.0
+margin_right = 180.0
+margin_bottom = 260.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 alignment = 0
+_sections_unfolded = [ "Rect" ]
 
 [node name="Label4" type="Label" parent="Page2/angryDog" index="0"]
 
@@ -434,21 +442,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 176.0
-margin_bottom = 6.0
+margin_right = 180.0
+margin_bottom = 8.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Angry Doggo?"
 align = 3
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Hint", "Margin", "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
 
 [node name="HSlider" type="HSlider" parent="Page2/angryDog" index="1"]
 
@@ -456,9 +464,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 10.0
-margin_right = 176.0
-margin_bottom = 26.0
+margin_top = 12.0
+margin_right = 180.0
+margin_bottom = 28.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -477,7 +485,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Margin" ]
+_sections_unfolded = [ "Margin", "Rect", "Size Flags" ]
 
 [node name="Label4" type="Label" parent="Page2" index="10"]
 
@@ -485,39 +493,38 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 258.0
-margin_right = 176.0
-margin_bottom = 264.0
+margin_top = 264.0
+margin_right = 180.0
+margin_bottom = 272.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Shower Much?"
 align = 3
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "Anchor", "Margin", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="babiesSelects2" type="HBoxContainer" parent="Page2" index="11"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 268.0
-margin_right = 176.0
-margin_bottom = 292.0
+margin_top = 276.0
+margin_right = 180.0
+margin_bottom = 300.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
@@ -527,7 +534,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 43.0
+margin_right = 49.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -535,7 +542,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -544,7 +551,7 @@ group = null
 text = "Nah"
 flat = false
 align = 0
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CheckBox2" type="CheckBox" parent="Page2/babiesSelects2" index="1"]
 
@@ -552,8 +559,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 47.0
-margin_right = 90.0
+margin_left = 53.0
+margin_right = 103.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -561,7 +568,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -578,8 +585,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 94.0
-margin_right = 142.0
+margin_left = 107.0
+margin_right = 164.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -587,7 +594,7 @@ focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
@@ -604,16 +611,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 296.0
-margin_right = 176.0
-margin_bottom = 313.0
+margin_top = 304.0
+margin_right = 180.0
+margin_bottom = 321.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -622,18 +629,19 @@ group = null
 text = "NEXT"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Grow Direction", "Rect", "Size Flags", "custom_fonts" ]
 
 [node name="Page3" type="VBoxContainer" parent="." index="2"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 184.0
-margin_bottom = 320.0
+margin_right = 180.0
+margin_bottom = 321.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -644,7 +652,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 20
 alignment = 1
-_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "Visibility", "custom_constants" ]
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
 
 [node name="Label" type="Label" parent="Page3" index="0"]
 
@@ -653,13 +661,13 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 115.0
-margin_right = 176.0
+margin_right = 172.0
 margin_bottom = 168.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 13
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
 text = "Welcome to Single in your Area! Use this App to find hot singles."
@@ -676,14 +684,14 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 188.0
-margin_right = 176.0
+margin_right = 172.0
 margin_bottom = 205.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 13
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
@@ -695,9 +703,81 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
+[node name="Page4" type="Container" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="FindrUI" type="Sprite" parent="Page4" index="0"]
+
+position = Vector2( 90, 160 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Matched" type="Node2D" parent="Page4" index="1"]
+
+script = ExtResource( 6 )
+
+[node name="Pic" type="Sprite" parent="Page4/Matched" index="0"]
+
+position = Vector2( 90.5675, 135.635 )
+scale = Vector2( 1.0037, 1.0037 )
+z_index = -1
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="NextPic" type="Sprite" parent="Page4/Matched" index="1"]
+
+position = Vector2( 90.5675, 135.635 )
+scale = Vector2( 1.0037, 1.0037 )
+z_index = -3
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Bio" type="RichTextLabel" parent="Page4/Matched" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 222.0
+margin_right = 161.0
+margin_bottom = 246.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0.847656, 0.241714, 0.52575, 1 )
+bbcode_enabled = false
+bbcode_text = "Not like the other girls. I'm dead."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Not like the other girls. I'm dead."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
+
 [connection signal="pressed" from="Page1/NextButton" to="." method="_change_page" binds= [ "Page2" ]]
 
-[connection signal="pressed" from="Page2/NextButton2" to="." method="_change_page" binds= [ "Page3" ]]
+[connection signal="pressed" from="Page2/NextButton2" to="." method="_change_page" binds= [ "Page4" ]]
 
 [connection signal="pressed" from="Page3/NextButton" to="." method="_change_page" binds= [ "Page2" ]]
 

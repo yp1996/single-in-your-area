@@ -67,6 +67,7 @@
     <Compile Include="Scripts\SaturationShaderController.cs" />
     <Compile Include="Scripts\SceneSwitcher.cs" />
     <Compile Include="Scripts\StatManager.cs" />
+    <Compile Include="Scripts\TinderMatch.cs" />
     <Compile Include="Scripts\XanaxCollectible.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
