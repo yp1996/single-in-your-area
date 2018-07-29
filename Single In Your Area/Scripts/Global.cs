@@ -3,6 +3,10 @@ using System;
 
 public class Global : Godot.Node
 {
+
+    // global vars =========================================
+    public static bool debugMode = true;
+    // ====================================================//
     public Node CurrentScene { get; set; }
 
     public override void _Ready()
