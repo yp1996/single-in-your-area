@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/tiles/mall-wall.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/tiles/mall-floor.png" type="Texture" id=2]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="mall-wall3" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mall-wall3" index="0"]
+
+position = Vector2( -32, -32 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mall-wall3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, 32, 64, 16, 64, 48, 32, 64, 0, 48, 0, 16, 32, 32 )
+_sections_unfolded = [ "Material", "Visibility", "Z Index" ]
+
+[node name="mall-floor" type="Sprite" parent="." index="1"]
+
+position = Vector2( 64, -16 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

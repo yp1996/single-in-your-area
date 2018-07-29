@@ -68,7 +68,7 @@ public class Player : KinematicBody2D
 	}
 	
 	private bool IsPassedOut() {
-		return (statManager.GetStat("health") == 0 || statManager.GetStat("anxiety") == 100);
+		return (statManager.GetStat("health") == 0 || statManager.GetStat("anxiety") == 10000);
 	}
 	
 	private void OnTimerTimeout() {
