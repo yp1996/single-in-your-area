@@ -7,10 +7,7 @@ path="res://.import/findr.png-a1e294b089c0a72d65068fa9d4bf5fc5.stex"
 [deps]
 
 source_file="res://UI/findr/findr.png"
-source_md5="5e4d7dd712e1ed710b0d4924dd535417"
-
 dest_files=[ "res://.import/findr.png-a1e294b089c0a72d65068fa9d4bf5fc5.stex" ]
-dest_md5="6ab3bf50b93c9ef95c60454802418c00"
 
 [params]
 

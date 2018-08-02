@@ -7,10 +7,7 @@ path="res://.import/lotExitWest.png-11cfa28dc70975af36cb31d6f9c5e1c3.stex"
 [deps]
 
 source_file="res://Sprites/lotExitWest.png"
-source_md5="be0738d678d12427cda5565e2b39e62c"
-
 dest_files=[ "res://.import/lotExitWest.png-11cfa28dc70975af36cb31d6f9c5e1c3.stex" ]
-dest_md5="62cb654598716d7caf45d04be8911bb2"
 
 [params]
 

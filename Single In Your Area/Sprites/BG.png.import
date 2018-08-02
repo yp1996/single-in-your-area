@@ -7,10 +7,7 @@ path="res://.import/BG.png-ca17f6b8b9642d5da3b94dfb74e1ee68.stex"
 [deps]
 
 source_file="res://Sprites/BG.png"
-source_md5="27e5a299b3ecf193f1f8985296cd1c50"
-
 dest_files=[ "res://.import/BG.png-ca17f6b8b9642d5da3b94dfb74e1ee68.stex" ]
-dest_md5="bbff0bfea591e2b4d4ac685072ccb6db"
 
 [params]
 

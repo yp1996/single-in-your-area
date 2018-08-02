@@ -25,7 +25,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="Page1" type="VBoxContainer" parent="." index="0"]
 
-visible = false
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -96,6 +96,7 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom
 
 [node name="Page2" type="VBoxContainer" parent="." index="1"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -705,6 +706,8 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Page4" type="Container" parent="." index="3"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -726,6 +729,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Matched" type="Node2D" parent="Page4" index="1"]
 
+editor/display_folded = true
 script = ExtResource( 6 )
 
 [node name="Pic" type="Sprite" parent="Page4/Matched" index="0"]

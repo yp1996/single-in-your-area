@@ -7,10 +7,7 @@ path="res://.import/roadEndEast.png-d2afae8626ac3934ddd18e7df39abf09.stex"
 [deps]
 
 source_file="res://Sprites/roadEndEast.png"
-source_md5="cf7979bcaac2dd9e0c2ba5683129e952"
-
 dest_files=[ "res://.import/roadEndEast.png-d2afae8626ac3934ddd18e7df39abf09.stex" ]
-dest_md5="db3c9670eea71258240d79f0299d79f7"
 
 [params]
 

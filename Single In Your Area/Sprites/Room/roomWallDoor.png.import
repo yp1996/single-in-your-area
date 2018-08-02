@@ -7,10 +7,7 @@ path="res://.import/roomWallDoor.png-eb4e57fa6f55b8273491c55881153f37.stex"
 [deps]
 
 source_file="res://Sprites/Room/roomWallDoor.png"
-source_md5="57eeb5bce85fa4f1329821993ff4df4d"
-
 dest_files=[ "res://.import/roomWallDoor.png-eb4e57fa6f55b8273491c55881153f37.stex" ]
-dest_md5="720c1159d2762f5fe75d121acdf0d62e"
 
 [params]
 

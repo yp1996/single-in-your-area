@@ -7,10 +7,7 @@ path="res://.import/roadTSouth.png-15ffcc0c852eec69c64caf958ee79e73.stex"
 [deps]
 
 source_file="res://Sprites/roadTSouth.png"
-source_md5="79d6c69cefb5d54916fd1f526f1e67dc"
-
 dest_files=[ "res://.import/roadTSouth.png-15ffcc0c852eec69c64caf958ee79e73.stex" ]
-dest_md5="889da9f7540a66d799a862b582c1f729"
 
 [params]
 

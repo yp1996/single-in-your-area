@@ -7,10 +7,7 @@ path="res://.import/XannyMakeItGoAway.wav-1b2e38ad2556c1fb9d72b09c788d1f95.sampl
 [deps]
 
 source_file="res://Audio/XannyMakeItGoAway.wav"
-source_md5="0ec76381fa272b728b8656bec4995dc3"
-
 dest_files=[ "res://.import/XannyMakeItGoAway.wav-1b2e38ad2556c1fb9d72b09c788d1f95.sample" ]
-dest_md5="76762eaca18c67e2ff531ea657923d2e"
 
 [params]
 

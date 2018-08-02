@@ -7,10 +7,7 @@ path="res://.import/ina.png-80ed0420d2102a4bdc93da2f9b315f73.stex"
 [deps]
 
 source_file="res://UI/findr/ina.png"
-source_md5="0a3f529fad890139e781a875f07a4293"
-
 dest_files=[ "res://.import/ina.png-80ed0420d2102a4bdc93da2f9b315f73.stex" ]
-dest_md5="d6d11da11e04ed4f6f1dd62ade4388ca"
 
 [params]
 

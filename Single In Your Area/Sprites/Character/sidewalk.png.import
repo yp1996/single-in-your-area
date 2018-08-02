@@ -7,10 +7,7 @@ path="res://.import/sidewalk.png-6cc56974d17c623b4d442ea2122dcd51.stex"
 [deps]
 
 source_file="res://Sprites/Character/sidewalk.png"
-source_md5="b17d6e159144af57387bfab1e084cc68"
-
 dest_files=[ "res://.import/sidewalk.png-6cc56974d17c623b4d442ea2122dcd51.stex" ]
-dest_md5="ea2d8571d31ffe759db3f9ac3dc2dd34"
 
 [params]
 

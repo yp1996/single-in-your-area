@@ -7,10 +7,7 @@ path="res://.import/dead.png-474a9a5808859cd06caba5c2f2f31f1c.stex"
 [deps]
 
 source_file="res://UI/findr/dead.png"
-source_md5="79ef440db1ac03c9ee265447ffa56be5"
-
 dest_files=[ "res://.import/dead.png-474a9a5808859cd06caba5c2f2f31f1c.stex" ]
-dest_md5="085243c1449af359e8639d81b383983f"
 
 [params]
 

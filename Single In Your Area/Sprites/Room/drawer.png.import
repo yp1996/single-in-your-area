@@ -7,10 +7,7 @@ path="res://.import/drawer.png-5a9cb1cdd1eb0f23fb80318cff65d8b6.stex"
 [deps]
 
 source_file="res://Sprites/Room/drawer.png"
-source_md5="4f914a405c9a11617099a00c9b789dbd"
-
 dest_files=[ "res://.import/drawer.png-5a9cb1cdd1eb0f23fb80318cff65d8b6.stex" ]
-dest_md5="1dd2b5732d01a7c0b9df495dad0b2cb1"
 
 [params]
 

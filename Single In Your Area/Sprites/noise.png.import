@@ -7,10 +7,7 @@ path="res://.import/noise.png-69470acec18767f2f38ddb2dd547a1a5.stex"
 [deps]
 
 source_file="res://Sprites/noise.png"
-source_md5="5f546d1fce97544aafe062fafd5fd887"
-
 dest_files=[ "res://.import/noise.png-69470acec18767f2f38ddb2dd547a1a5.stex" ]
-dest_md5="354bc5bd18636ced70f08a62006f8059"
 
 [params]
 

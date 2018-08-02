@@ -7,10 +7,7 @@ path="res://.import/treeShort_autumn.png-eadad32e3b540b27e91202b02a0a2520.stex"
 [deps]
 
 source_file="res://Sprites/treeShort_autumn.png"
-source_md5="fe49dfbca12c1fcfd3429136316f902b"
-
 dest_files=[ "res://.import/treeShort_autumn.png-eadad32e3b540b27e91202b02a0a2520.stex" ]
-dest_md5="9e0daf4a262905313f371bf7d8d060d5"
 
 [params]
 

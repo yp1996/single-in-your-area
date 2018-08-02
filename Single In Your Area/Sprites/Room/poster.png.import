@@ -7,10 +7,7 @@ path="res://.import/poster.png-4faea8e7bb0333218da151bdd1671be6.stex"
 [deps]
 
 source_file="res://Sprites/Room/poster.png"
-source_md5="4bf2a931cc5e4df708aaf2093755fc2b"
-
 dest_files=[ "res://.import/poster.png-4faea8e7bb0333218da151bdd1671be6.stex" ]
-dest_md5="17e3c8597c85c93301dba438e60ddbf9"
 
 [params]
 

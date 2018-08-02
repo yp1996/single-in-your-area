@@ -7,10 +7,7 @@ path="res://.import/Xanax1.png-e3a9251a96573f11061c06bd92bc325e.stex"
 [deps]
 
 source_file="res://Sprites/Items/Xanax1.png"
-source_md5="ba8b7632126eb1632e0b79fc8b2cd504"
-
 dest_files=[ "res://.import/Xanax1.png-e3a9251a96573f11061c06bd92bc325e.stex" ]
-dest_md5="ae99ff6bc688a2c2d5ab5dc7e2daeb25"
 
 [params]
 

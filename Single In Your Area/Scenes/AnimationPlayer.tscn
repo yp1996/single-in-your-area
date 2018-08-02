@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Shaders/HeartAnimation.shader" type="Shader" id=1]
+[ext_resource path="res://Sprites/BG.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/heart.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "heart "
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 0.25, 1, 1 ),
+"update": 0,
+"values": [ 20.0, 3.0, 10.0, 1.0 ]
+}
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/screenSizeX = null
+shader_param/screenSizeY = null
+shader_param/scale = 1.0
+shader_param/bgTexture = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+
+root_node = NodePath("TextureRect")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+"anims/heart " = SubResource( 1 )
+blend_times = [  ]
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+
+material = SubResource( 2 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -160.0
+margin_right = 89.0
+margin_bottom = 162.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme" ]
+
+

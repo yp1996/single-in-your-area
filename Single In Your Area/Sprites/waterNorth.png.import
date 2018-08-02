@@ -7,10 +7,7 @@ path="res://.import/waterNorth.png-3f38a20e6053ff6aa89d0d16f88bdd03.stex"
 [deps]
 
 source_file="res://Sprites/waterNorth.png"
-source_md5="d2d032d72bfbdb39ebef1713f951d266"
-
 dest_files=[ "res://.import/waterNorth.png-3f38a20e6053ff6aa89d0d16f88bdd03.stex" ]
-dest_md5="6abae32c82d05783bc7f407ccabee42e"
 
 [params]
 

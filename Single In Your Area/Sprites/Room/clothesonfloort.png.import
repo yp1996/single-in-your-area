@@ -7,10 +7,7 @@ path="res://.import/clothesonfloort.png-060e038c2626509a408423559d3e9aa8.stex"
 [deps]
 
 source_file="res://Sprites/Room/clothesonfloort.png"
-source_md5="91bff9c58b765f64d5e284a9c9ab1882"
-
 dest_files=[ "res://.import/clothesonfloort.png-060e038c2626509a408423559d3e9aa8.stex" ]
-dest_md5="0d9bdd467bf02de9e56a756370d65911"
 
 [params]
 

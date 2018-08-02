@@ -7,10 +7,7 @@ path="res://.import/avi-love.png-2acfbc1c1e4a42a2731a978a5dced516.stex"
 [deps]
 
 source_file="res://Sprites/avi-love.png"
-source_md5="c8e389064a24629f9074500f7da521e5"
-
 dest_files=[ "res://.import/avi-love.png-2acfbc1c1e4a42a2731a978a5dced516.stex" ]
-dest_md5="99fa49cdb7ccecdcee309cc62f1171fc"
 
 [params]
 

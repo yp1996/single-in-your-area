@@ -7,10 +7,7 @@ path="res://.import/findr_crushprofile_lighter.png-3903e07e5b82e2113853865d06361
 [deps]
 
 source_file="res://UI/findr/findr_crushprofile_lighter.png"
-source_md5="12c2b23c492d751e991a96d529d3c345"
-
 dest_files=[ "res://.import/findr_crushprofile_lighter.png-3903e07e5b82e2113853865d06361ad5.stex" ]
-dest_md5="2b58098a30b9970c170d0ed7d0693c9f"
 
 [params]
 

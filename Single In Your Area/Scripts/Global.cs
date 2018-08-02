@@ -1,9 +1,15 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class Global : Godot.Node
 {
     public Node CurrentScene { get; set; }
+	public const string animationPath = "res://Scenes/AnimationTransition.tscn";
+	private AnimationPlayer transitionAnimationPlayer;
+	private PackedScene transitionAnimation;
 
     public override void _Ready()
     {
@@ -25,21 +31,45 @@ public class Global : Godot.Node
         CallDeferred(nameof(DeferredGotoScene), path);
     }
 
-    public void DeferredGotoScene(string path)
+    public async void DeferredGotoScene(string path)
     {
         // Immediately free the current scene, there is no risk here.
-        CurrentScene.Free();
+		transitionAnimation = (PackedScene) GD.Load(animationPath);
+		transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
+		CurrentScene.AddChild(transitionAnimationPlayer); 
+
+		transitionAnimationPlayer.Play("heart");
+		await ToSignal(transitionAnimationPlayer, "animation_finished");	
+        CallDeferred(nameof(DeferredClearScene), path);
+    }
+	
+	public async void DeferredClearScene(string path) {
+		CurrentScene.Free();
 
         // Load a new scene
         var nextScene = (PackedScene)GD.Load(path);
 
         // Instance the new scene
         CurrentScene = nextScene.Instance();
+			
+		//transitionAnimationPlayer.Free();
 
         // Add it to the active scene, as child of root
         GetTree().GetRoot().AddChild(CurrentScene);
-
+		
+		
         // optional, to make it compatible with the SceneTree.change_scene() API
         GetTree().SetCurrentScene(CurrentScene);
-    }
+		
+		//transitionAnimation = (PackedScene) GD.Load(animationPath);
+		transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
+		CurrentScene.AddChild(transitionAnimationPlayer); 
+		transitionAnimationPlayer.PlayBackwards("heart");
+		await ToSignal(transitionAnimationPlayer, "transition_finished");
+		CallDeferred(nameof(DeferredClearTransition));
+	}
+	
+	public void DeferredClearTransition() {
+		transitionAnimationPlayer.QueueFree();
+	}
 }

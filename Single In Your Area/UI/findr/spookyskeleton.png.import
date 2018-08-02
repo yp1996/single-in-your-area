@@ -7,10 +7,7 @@ path="res://.import/spookyskeleton.png-70a8fae1126a01b8b2573a1087cec512.stex"
 [deps]
 
 source_file="res://UI/findr/spookyskeleton.png"
-source_md5="a067624f58b47a96a6d1fe440fa2dfc9"
-
 dest_files=[ "res://.import/spookyskeleton.png-70a8fae1126a01b8b2573a1087cec512.stex" ]
-dest_md5="9e835f6bea6a945a292665c76cc7ec44"
 
 [params]
 

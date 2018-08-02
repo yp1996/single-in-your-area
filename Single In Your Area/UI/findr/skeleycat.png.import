@@ -7,10 +7,7 @@ path="res://.import/skeleycat.png-be6dcb9d602d2ba5446282a49fe1d3a4.stex"
 [deps]
 
 source_file="res://UI/findr/skeleycat.png"
-source_md5="760b2c89d96b5647f2c267a0aca7e432"
-
 dest_files=[ "res://.import/skeleycat.png-be6dcb9d602d2ba5446282a49fe1d3a4.stex" ]
-dest_md5="3808788a4e75306d585e4e4550f1cd5a"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/desk.png-714e07fe7010d76f26ff2ab3abdf9b71.stex"
 [deps]
 
 source_file="res://Sprites/Room/desk.png"
-source_md5="e3e4da3daf652201cf3a8f8c3a56dc73"
-
 dest_files=[ "res://.import/desk.png-714e07fe7010d76f26ff2ab3abdf9b71.stex" ]
-dest_md5="b5af341a477fe0a03a5791f8492839a1"
 
 [params]
 

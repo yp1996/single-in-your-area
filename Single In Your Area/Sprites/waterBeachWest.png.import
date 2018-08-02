@@ -7,10 +7,7 @@ path="res://.import/waterBeachWest.png-e2557a97cf49793f0dcca0f73d9bce66.stex"
 [deps]
 
 source_file="res://Sprites/waterBeachWest.png"
-source_md5="8e46adceb406b320ce87c4579af6bac9"
-
 dest_files=[ "res://.import/waterBeachWest.png-e2557a97cf49793f0dcca0f73d9bce66.stex" ]
-dest_md5="d3114b6f8001a4ca39d340fa65611bc9"
 
 [params]
 

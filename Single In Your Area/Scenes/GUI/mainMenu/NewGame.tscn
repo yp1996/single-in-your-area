@@ -41,8 +41,9 @@ func _on_Quit_pressed():
 	get_tree().quit() # default behavior
 	pass # replace with function body
 "
+_sections_unfolded = [ "Resource" ]
 
-[node name="MainMenu" type="MarginContainer" index="0"]
+[node name="MainMenu" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0

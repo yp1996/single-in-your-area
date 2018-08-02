@@ -100,9 +100,9 @@ public class ViewportContainer : VBoxContainer {
     string[] optionLabels = MessageLogic.GetOurOptions(messageAt);
     Requirement[] requirements = MessageLogic.GetOurRequirements(messageAt);
     HBoxContainer answerContainer = (HBoxContainer) GetNode("TextEntry");
-    object[] buttonList = answerContainer.GetChildren();
+    var buttonList = answerContainer.GetChildren();
 
-    for (int i = 0; i < buttonList.Length; i++) {
+    for (int i = 0; i < buttonList.Count; i++) {
       Label answerButton = (Label) buttonList[i];
       if (i < optionLabels.Length && requirements[i].isFulfilled(statManager)) {
         answerButton.Visible = true;

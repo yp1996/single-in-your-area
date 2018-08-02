@@ -7,10 +7,7 @@ path="res://.import/dirtHigh.png-5c812fe1396cc0c0d88366c31c14f4d5.stex"
 [deps]
 
 source_file="res://Sprites/dirtHigh.png"
-source_md5="4955775ab31328b5800358000e56e493"
-
 dest_files=[ "res://.import/dirtHigh.png-5c812fe1396cc0c0d88366c31c14f4d5.stex" ]
-dest_md5="d96e456fefbc1420a3514019f72bfc1a"
 
 [params]
 

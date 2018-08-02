@@ -339,6 +339,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 position = Vector2( 610.807, 346.895 )
 stream = ExtResource( 20 )
 volume_db = 1.0
+pitch_scale = 1.0
 autoplay = true
 max_distance = 2000.0
 attenuation = 1.0

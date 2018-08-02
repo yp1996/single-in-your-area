@@ -7,10 +7,7 @@ path="res://.import/onfire.png-a3a3ddf0afe68ad6d34957dc9e82b4aa.stex"
 [deps]
 
 source_file="res://UI/findr/onfire.png"
-source_md5="0b475b760ed3b0d6d245ccfc938f229b"
-
 dest_files=[ "res://.import/onfire.png-a3a3ddf0afe68ad6d34957dc9e82b4aa.stex" ]
-dest_md5="2ca0641d375fc22ddf65b1127b75d1e1"
 
 [params]
 

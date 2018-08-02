@@ -7,10 +7,7 @@ path="res://.import/lamp.png-624c837e630b558c0d863f276b0794b2.stex"
 [deps]
 
 source_file="res://Sprites/Room/lamp.png"
-source_md5="63b2f17b277e257831e868348ef2545f"
-
 dest_files=[ "res://.import/lamp.png-624c837e630b558c0d863f276b0794b2.stex" ]
-dest_md5="1cbeefc43ec29d8a09b854441ecbec3e"
 
 [params]
 

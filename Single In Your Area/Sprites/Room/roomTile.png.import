@@ -7,10 +7,7 @@ path="res://.import/roomTile.png-90f5e6420eb40da1324c6a2d9a8593c2.stex"
 [deps]
 
 source_file="res://Sprites/Room/roomTile.png"
-source_md5="f33b182f1c88fcef435bad107f1dfab9"
-
 dest_files=[ "res://.import/roomTile.png-90f5e6420eb40da1324c6a2d9a8593c2.stex" ]
-dest_md5="7657a3d8caabb9522edb86c9b1fee87e"
 
 [params]
 

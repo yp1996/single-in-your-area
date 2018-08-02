@@ -7,10 +7,7 @@ path="res://.import/sprites_crush_icon.png-fe534cd7439c9f7e11dc74957c56309b.stex
 [deps]
 
 source_file="res://UI/findr/sprites_crush_icon.png"
-source_md5="f0e2b85094e5a4789e8d39447248f90c"
-
 dest_files=[ "res://.import/sprites_crush_icon.png-fe534cd7439c9f7e11dc74957c56309b.stex" ]
-dest_md5="fd4968b27c96998a855824578321c467"
 
 [params]
 

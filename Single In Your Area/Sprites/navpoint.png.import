@@ -7,10 +7,7 @@ path="res://.import/navpoint.png-d408eab789e8f7f1eb82b3c12e1ab223.stex"
 [deps]
 
 source_file="res://Sprites/navpoint.png"
-source_md5="8b9088da66f5e3527a98ff726e085dba"
-
 dest_files=[ "res://.import/navpoint.png-d408eab789e8f7f1eb82b3c12e1ab223.stex" ]
-dest_md5="0dc95cc94e561095315cc3d5eda9b7f4"
 
 [params]
 

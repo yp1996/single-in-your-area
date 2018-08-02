@@ -7,10 +7,7 @@ path="res://.import/avi-you.png-1fea2b96eed94289681b643007b6e550.stex"
 [deps]
 
 source_file="res://UI/findr/avi-you.png"
-source_md5="e42f71288ef4edd9e773b5cadd196055"
-
 dest_files=[ "res://.import/avi-you.png-1fea2b96eed94289681b643007b6e550.stex" ]
-dest_md5="f9998349699a3578fb0212426f36c5d7"
 
 [params]
 

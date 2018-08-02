@@ -18,7 +18,7 @@ public class StatManager : Node
 		}
 	}
 	
-	private Dictionary<String, Stat> stats = new Dictionary<String, Stat>();
+	private System.Collections.Generic.Dictionary<String, Stat> stats = new System.Collections.Generic.Dictionary<String, Stat>();
 
     public override void _Ready()
     {

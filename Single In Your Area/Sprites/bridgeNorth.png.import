@@ -7,10 +7,7 @@ path="res://.import/bridgeNorth.png-5270e2d3df3ceb8002150ff638b92ec6.stex"
 [deps]
 
 source_file="res://Sprites/bridgeNorth.png"
-source_md5="bb448a55a09f3fe30f8ffa7d6e9a5789"
-
 dest_files=[ "res://.import/bridgeNorth.png-5270e2d3df3ceb8002150ff638b92ec6.stex" ]
-dest_md5="fa0396d59c1fd6718ec0c6bd0b3ab11f"
 
 [params]
 

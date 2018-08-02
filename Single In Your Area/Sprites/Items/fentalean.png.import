@@ -7,10 +7,7 @@ path="res://.import/fentalean.png-dadeacf6e850c978608a2e06c1fbd4e5.stex"
 [deps]
 
 source_file="res://Sprites/Items/fentalean.png"
-source_md5="8cc50aca7bf2082d95b40914ef6fde98"
-
 dest_files=[ "res://.import/fentalean.png-dadeacf6e850c978608a2e06c1fbd4e5.stex" ]
-dest_md5="d52318b1a7d6d64b5fb52200f261be8a"
 
 [params]
 

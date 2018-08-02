@@ -7,10 +7,7 @@ path="res://.import/chair2.png-205ef36cab4e980de04d1b39a51a2c27.stex"
 [deps]
 
 source_file="res://Sprites/Room/chair2.png"
-source_md5="9648755dfbfceebf157b0eaa959c007e"
-
 dest_files=[ "res://.import/chair2.png-205ef36cab4e980de04d1b39a51a2c27.stex" ]
-dest_md5="41392657729272f0c1b1db9baf1d409d"
 
 [params]
 

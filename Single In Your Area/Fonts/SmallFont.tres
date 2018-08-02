@@ -3,6 +3,7 @@
 [sub_resource type="DynamicFontData" id=1]
 
 resource_local_to_scene = true
+hinting = 2
 font_path = "res://Fonts/C64_Pro-STYLE.ttf"
 _sections_unfolded = [ "Resource" ]
 

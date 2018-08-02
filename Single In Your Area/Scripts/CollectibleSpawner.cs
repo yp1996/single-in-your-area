@@ -46,7 +46,7 @@ public class CollectibleSpawner : Node2D
 	private void OnSpawnTimerTimeout()
 	{
 	    // Replace with function body
-		int numItems = GetTree().GetNodesInGroup("Collectibles").Length;
+		int numItems = GetTree().GetNodesInGroup("Collectibles").Count;
 		if (numItems < maxItems) {
 			Spawn();
 		}

@@ -7,10 +7,7 @@ path="res://.import/person2.png-15b34615bb7af91f27cedbc662871069.stex"
 [deps]
 
 source_file="res://UI/findr/person2.png"
-source_md5="79ef440db1ac03c9ee265447ffa56be5"
-
 dest_files=[ "res://.import/person2.png-15b34615bb7af91f27cedbc662871069.stex" ]
-dest_md5="085243c1449af359e8639d81b383983f"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/lotCornerEast.png-574bea1576a179e5e4bca5db33b39c77.stex"
 [deps]
 
 source_file="res://Sprites/lotCornerEast.png"
-source_md5="bb04014f6c28b8ac96800dc0ce2a0312"
-
 dest_files=[ "res://.import/lotCornerEast.png-574bea1576a179e5e4bca5db33b39c77.stex" ]
-dest_md5="192628bfa8b567297b98552ae28bcfe8"
 
 [params]
 

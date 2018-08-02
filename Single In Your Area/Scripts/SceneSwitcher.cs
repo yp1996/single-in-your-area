@@ -8,6 +8,7 @@ public class SceneSwitcher : StaticBody2D
     // private string b = "textvar";
 
     public string scene = "res://Scenes/Levels/Mall.tscn";
+	private bool isSwitching = false;
     public override void _Ready()
     {
         // Called every time the node is added to the scene.
@@ -17,8 +18,11 @@ public class SceneSwitcher : StaticBody2D
 
     public void SwitchScene()
     {
-        var global = (Global)GetNode("/root/Global");
-        global.GotoScene(scene);
+		if (!isSwitching) {
+	        var global = (Global)GetNode("/root/Global");
+	        global.GotoScene(scene);
+			isSwitching = true;
+		}
     }
 
 }

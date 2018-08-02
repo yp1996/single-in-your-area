@@ -7,10 +7,7 @@ path="res://.import/hillRoadWest.png-4f0562980c9904f644b42326b380ccdb.stex"
 [deps]
 
 source_file="res://Sprites/hillRoadWest.png"
-source_md5="d98f3b8ef9dce5f5bfb932b4e0d15cd3"
-
 dest_files=[ "res://.import/hillRoadWest.png-4f0562980c9904f644b42326b380ccdb.stex" ]
-dest_md5="718baf07b397755238bac3e318f25177"
 
 [params]
 

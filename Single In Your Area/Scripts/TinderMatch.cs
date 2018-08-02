@@ -16,10 +16,11 @@ public class TinderMatch : Node2D
 	private Vector2 screenCentre;
 	private float slideSpeed = 10f;
 	
-	private float cooldownTime = 1f;
-	private float maxCooldown = 1f;
+	private float cooldownTime = 0.5f;
+	private float maxCooldown = 0.5f;
 	
 	public string scene = "res://Scenes/Levels/Bedroom.tscn";
+	private bool isSwitching = false;
 	
 	public struct TinderProfile {
 		public Texture picture;
@@ -30,7 +31,6 @@ public class TinderMatch : Node2D
 			bio = bioText;
 		}
 	}
-	
 	
 	private List<TinderProfile> tinderProfiles;
 	private TinderProfile currentProfile;
@@ -45,10 +45,10 @@ public class TinderMatch : Node2D
         sprite = (Sprite)GetNode("Pic");
 		nextSprite = (Sprite)GetNode("NextPic");
 		label = (RichTextLabel)GetNode("Bio");
-		screenSize = GetViewportRect().Size;
-		GD.Print(screenSize.x);
+		screenSize = GetViewportRect().Size;		
 		screenCentre = screenSize / 2f;
 		lastMousePosition = screenCentre;
+		
 		tinderProfiles = new List<TinderProfile>();
 		tinderProfiles.Add(new TinderProfile("dead", "Not like the other girls. I'm dead"));
 		tinderProfiles.Add(new TinderProfile("onfire", "In She’ol but movin’ on up to the world to come"));
@@ -57,7 +57,8 @@ public class TinderMatch : Node2D
 		tinderProfiles.Add(new TinderProfile("spookyskeleton", "I’ve been dead since Wednesday lmao"));
 		tinderProfiles.Add(new TinderProfile("slime", "Not technically 'alive' (wednesday amirite?) but looking to meet new 'people'"));
 		tinderProfiles.Add(new TinderProfile("ina", "“Somehow survived” Wednesday, so ofc I’m on Findr"));
-    	currentProfile = tinderProfiles[currentIndex];
+    	
+		currentProfile = tinderProfiles[currentIndex];
 		nextProfile = tinderProfiles[currentIndex + 1];
 		nextSprite.SetTexture(nextProfile.picture);
 		
@@ -65,7 +66,7 @@ public class TinderMatch : Node2D
 	
 	public override void _Process(float delta) {
 		
-		if (IsVisible()) {
+		if (sprite.IsVisible() && (!isSwitching)) {
 		
 		if (cooldownTime <= 0f) { // Block swiping so that you don't swipe through all profiles at once
 		
@@ -108,9 +109,10 @@ public class TinderMatch : Node2D
 			}
 			
 			if (hasSwipedRight(currentPosition)) {
-				
+
 				var global = (Global)GetNode("/root/Global");
                 global.GotoScene(scene);
+				isSwitching = true;
 			}
 		}
 		
@@ -128,22 +130,9 @@ public class TinderMatch : Node2D
 	
 	private bool hasSwipedRight(Vector2 currentPosition) {
 		// For the first n-1 profiles you can only swipe left 
-		return (currentPosition.x >= screenSize.x && currentIndex >= tinderProfiles.Count - 1);
+		return (currentPosition.x >= screenSize.x && currentIndex >= tinderProfiles.Count - 1) && (!isSwitching);
 	}
-	
-	private void OnLeftInputEvent(Godot.Object viewport, Godot.Object input, int shape_idx)
-	{
-		GD.Print("O look an event");
-	    if ((InputEvent) input is InputEventMouseButton button) {
-			sprite.Hide();
-		}
-	}
-	
-	private void OnRightInputEvent(System.Object viewport, System.Object @event, int shape_idx)
-	{
-	    // Replace with function body
-		GD.Print("O look an event right");
-	}
+
 
 
 

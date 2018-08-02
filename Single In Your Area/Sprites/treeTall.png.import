@@ -7,10 +7,7 @@ path="res://.import/treeTall.png-17e33a7b41530e8c10b2ea955aca4e87.stex"
 [deps]
 
 source_file="res://Sprites/treeTall.png"
-source_md5="868b7ab74fb36e3d69744a38e2658c63"
-
 dest_files=[ "res://.import/treeTall.png-17e33a7b41530e8c10b2ea955aca4e87.stex" ]
-dest_md5="65b46d2c29f82716055485d01bd5690e"
 
 [params]
 

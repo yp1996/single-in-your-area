@@ -7,10 +7,7 @@ path="res://.import/avi-you.png-4a63fdf00ab4d433b980275e90feff88.stex"
 [deps]
 
 source_file="res://Sprites/avi-you.png"
-source_md5="e42f71288ef4edd9e773b5cadd196055"
-
 dest_files=[ "res://.import/avi-you.png-4a63fdf00ab4d433b980275e90feff88.stex" ]
-dest_md5="72398cad669b53ceb18a19ef8d4c3bd3"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/treeConiferShort.png-f4a1a97f9dd802bd5b80d03ef6ee56a9.stex"
 [deps]
 
 source_file="res://Sprites/treeConiferShort.png"
-source_md5="6e850ff1f86d7f23866d65679e6d8592"
-
 dest_files=[ "res://.import/treeConiferShort.png-f4a1a97f9dd802bd5b80d03ef6ee56a9.stex" ]
-dest_md5="ed928f21973102d211fc63e0b4b44ec6"
 
 [params]
 
