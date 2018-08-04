@@ -79,6 +79,9 @@ shader = ExtResource( 15 )
 
 render_priority = 0
 shader = ExtResource( 18 )
+shader_param/baseColor = null
+shader_param/colChange = null
+shader_param/foregroundColor = null
 
 [node name="World" type="Node2D"]
 

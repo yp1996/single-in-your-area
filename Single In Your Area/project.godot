@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Single In Your Area"
-run/main_scene="res://Scenes/Levels/Bedroom.tscn"
+run/main_scene="res://Scenes/GUI/mainMenu/NewGame.tscn"
 config/icon="res://icon.png"
 
 [autoload]

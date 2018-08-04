@@ -3,10 +3,10 @@
 [ext_resource path="res://Scenes/AnimationTransition.tres" type="Animation" id=1]
 [ext_resource path="res://Scripts/AnimationTransition.cs" type="Script" id=2]
 [ext_resource path="res://Shaders/HeartAnimation.shader" type="Shader" id=3]
-[ext_resource path="res://Sprites/BG.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/BG_notext.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/heart.png" type="Texture" id=5]
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
 shader = ExtResource( 3 )
@@ -39,13 +39,12 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="AnimParent" type="Node2D" parent="CanvasLayer" index="0"]
 
-editor/display_folded = true
 z_index = 100
 _sections_unfolded = [ "Z Index" ]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/AnimParent" index="0"]
 
-material = SubResource( 3 )
+material = SubResource( 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -63,7 +62,7 @@ size_flags_vertical = 4
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Rect", "Theme", "Visibility" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Rect", "Theme", "Visibility" ]
 
 [connection signal="animation_finished" from="." to="." method="_on_TransitionAnimation_animation_finished"]
 

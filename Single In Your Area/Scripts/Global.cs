@@ -17,7 +17,7 @@ public class Global : Godot.Node
         CurrentScene = root.GetChild(root.GetChildCount() - 1);
     }
 
-    public void GotoScene(string path)
+    public void GotoScene(string path, bool shouldAnimate = true)
     {
         // This function will usually be called from a signal callback,
         // or some other function from the running scene.
@@ -28,22 +28,27 @@ public class Global : Godot.Node
         // The way around this is deferring the load to a later time, when
         // it is ensured that no code from the current scene is running:
 
-        CallDeferred(nameof(DeferredGotoScene), path);
+		GD.Print("sure let's go");
+        CallDeferred(nameof(DeferredGotoScene), path, shouldAnimate);
     }
 
-    public async void DeferredGotoScene(string path)
+    public async void DeferredGotoScene(string path, bool shouldAnimate)
     {
+		GD.Print("deferred scene");
         // Immediately free the current scene, there is no risk here.
-		transitionAnimation = (PackedScene) GD.Load(animationPath);
-		transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
-		CurrentScene.AddChild(transitionAnimationPlayer); 
-
-		transitionAnimationPlayer.Play("heart");
-		await ToSignal(transitionAnimationPlayer, "animation_finished");	
-        CallDeferred(nameof(DeferredClearScene), path);
+		if (shouldAnimate) {
+			transitionAnimation = (PackedScene) GD.Load(animationPath);
+			transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
+			CurrentScene.AddChild(transitionAnimationPlayer); 
+	
+			transitionAnimationPlayer.Play("heart");
+			await ToSignal(transitionAnimationPlayer, "animation_finished");	
+		}
+        CallDeferred(nameof(DeferredClearScene), path, shouldAnimate);
     }
 	
-	public async void DeferredClearScene(string path) {
+	public async void DeferredClearScene(string path, bool shouldAnimate) {
+		GD.Print("deferred scene [t 2");
 		CurrentScene.Free();
 
         // Load a new scene
@@ -61,12 +66,13 @@ public class Global : Godot.Node
         // optional, to make it compatible with the SceneTree.change_scene() API
         GetTree().SetCurrentScene(CurrentScene);
 		
-		//transitionAnimation = (PackedScene) GD.Load(animationPath);
-		transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
-		CurrentScene.AddChild(transitionAnimationPlayer); 
-		transitionAnimationPlayer.PlayBackwards("heart");
-		await ToSignal(transitionAnimationPlayer, "transition_finished");
-		CallDeferred(nameof(DeferredClearTransition));
+		if (shouldAnimate) {
+			transitionAnimationPlayer = (AnimationPlayer) transitionAnimation.Instance();
+			CurrentScene.AddChild(transitionAnimationPlayer); 
+			transitionAnimationPlayer.PlayBackwards("heart");
+			await ToSignal(transitionAnimationPlayer, "transition_finished");
+			CallDeferred(nameof(DeferredClearTransition));
+		}
 	}
 	
 	public void DeferredClearTransition() {
