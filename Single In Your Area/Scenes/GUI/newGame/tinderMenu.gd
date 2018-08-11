@@ -19,7 +19,7 @@ func _change_page(pageName):
 		if(N.get_name() == pageName):
 			N.show()
 			print("["+N.get_name()+"] matches")
-		elif (N.get_name() != "BG" || pageName == "Page4"):
+		elif (N.get_name() != "BGMusic"):
 			N.hide()
 			print("["+N.get_name()+"] not match")
 	# Called every time the node is added to the scene.

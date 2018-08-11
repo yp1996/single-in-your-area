@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/GUI/newGame/tinderMenu.gd" type="Script" id=1]
 [ext_resource path="res://UI/findr/findr-bg.png" type="Texture" id=2]
@@ -6,9 +6,15 @@
 [ext_resource path="res://Scenes/GUI/newGame/tinderMenu.tres.stylebox" type="StyleBox" id=4]
 [ext_resource path="res://UI/findr/sprites_main_icon.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/SmallFont.tres" type="DynamicFont" id=6]
-[ext_resource path="res://UI/findr/findr.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/TinderMatch.cs" type="Script" id=8]
-[ext_resource path="res://UI/findr/dead.png" type="Texture" id=9]
+[ext_resource path="res://UI/findr/checkbox_no.png" type="Texture" id=7]
+[ext_resource path="res://UI/findr/checkbox_yes.png" type="Texture" id=8]
+[ext_resource path="res://UI/findr/check_yes.png" type="Texture" id=9]
+[ext_resource path="res://UI/findr/check_no.png" type="Texture" id=10]
+[ext_resource path="res://UI/findr/grabber.png" type="Texture" id=11]
+[ext_resource path="res://UI/findr/findr.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/TinderMatch.cs" type="Script" id=13]
+[ext_resource path="res://UI/findr/dead.png" type="Texture" id=14]
+[ext_resource path="res://Audio/Evangelion_Trimmed.ogg" type="AudioStream" id=15]
 
 [node name="MainMenu" type="Container" index="0"]
 
@@ -27,7 +33,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="Page1" type="Node2D" parent="." index="0"]
 
-visible = false
 _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="BG" type="TextureRect" parent="Page1" index="0"]
@@ -131,6 +136,7 @@ _sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom
 
 [node name="Page2" type="Node2D" parent="." index="1"]
 
+visible = false
 _sections_unfolded = [ "Visibility" ]
 
 [node name="ColorRect" type="ColorRect" parent="Page2" index="0"]
@@ -158,8 +164,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 2.0
-margin_right = 182.0
-margin_bottom = 349.0
+margin_top = -4.0
+margin_right = 190.0
+margin_bottom = 323.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -170,9 +177,6 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Label2" type="Label" parent="Page2/Page22" index="0"]
 
@@ -180,14 +184,14 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 180.0
-margin_bottom = 11.0
+margin_right = 188.0
+margin_bottom = 13.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
 text = "Your Profile"
@@ -199,19 +203,20 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="CenterContainer" type="CenterContainer" parent="Page2/Page22" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 15.0
-margin_right = 180.0
-margin_bottom = 45.0
+margin_top = 17.0
+margin_right = 188.0
+margin_bottom = 47.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 use_top_left = false
 _sections_unfolded = [ "Hint", "Rect" ]
 
@@ -221,8 +226,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 75.0
-margin_right = 105.0
+margin_left = 79.0
+margin_right = 109.0
 margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -240,15 +245,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 49.0
-margin_right = 180.0
-margin_bottom = 57.0
+margin_top = 51.0
+margin_right = 188.0
+margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
 text = "Your Name:"
@@ -264,17 +269,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1.0
-margin_top = 61.0
-margin_right = 180.0
-margin_bottom = 76.0
+margin_top = 68.0
+margin_right = 188.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
@@ -295,18 +299,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 73.0
-margin_right = 180.0
-margin_bottom = 113.0
+margin_top = 85.0
+margin_right = 188.0
+margin_bottom = 125.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/off = ExtResource( 7 )
+custom_icons/on = ExtResource( 8 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
+custom_colors/font_color_hover = Color( 1, 0.298039, 0.592157, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -314,7 +321,7 @@ group = null
 text = "Gender"
 flat = false
 align = 0
-_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_fonts", "custom_icons" ]
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_icons" ]
 
 [node name="YourPersonality" type="Label" parent="Page2/Page22" index="5"]
 
@@ -322,18 +329,19 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 117.0
-margin_right = 180.0
-margin_bottom = 128.0
+margin_top = 129.0
+margin_right = 188.0
+margin_bottom = 142.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
-text = "Your Personality:"
+text = "Your Personality"
+align = 1
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
@@ -346,16 +354,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 132.0
-margin_right = 180.0
-margin_bottom = 140.0
+margin_top = 146.0
+margin_right = 188.0
+margin_bottom = 159.0
 grow_horizontal = 0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
 text = "How many babies?"
@@ -371,15 +379,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 144.0
-margin_right = 180.0
-margin_bottom = 160.0
+margin_top = 163.0
+margin_right = 188.0
+margin_bottom = 195.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
@@ -389,21 +397,26 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 48.0
-margin_bottom = 16.0
+margin_right = 64.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
 custom_colors/font_color_hover = Color( 0.574951, 0.803823, 0.9375, 1 )
 custom_colors/font_color_pressed = Color( 0.574951, 0.803823, 0.9375, 1 )
+custom_constants/check_vadjust = 0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -419,22 +432,27 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 52.0
-margin_right = 79.0
-margin_bottom = 16.0
+margin_left = 68.0
+margin_right = 126.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
 custom_colors/font_color_hover = Color( 0.574951, 0.803823, 0.9375, 1 )
 custom_colors/font_color_pressed = Color( 0.574951, 0.803823, 0.9375, 1 )
+custom_constants/check_vadjust = 0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -450,22 +468,27 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 83.0
-margin_right = 110.0
-margin_bottom = 16.0
+margin_left = 130.0
+margin_right = 188.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
 custom_colors/font_color_hover = Color( 0.574951, 0.803823, 0.9375, 1 )
 custom_colors/font_color_pressed = Color( 0.574951, 0.803823, 0.9375, 1 )
+custom_constants/check_vadjust = 0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -481,26 +504,29 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 164.0
-margin_right = 180.0
-margin_bottom = 204.0
+margin_top = 199.0
+margin_right = 188.0
+margin_bottom = 239.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/off = ExtResource( 7 )
+custom_icons/on = ExtResource( 8 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
+custom_colors/font_color_hover = Color( 1, 0.298039, 0.592157, 1 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Puppo or no?"
-flat = true
+flat = false
 align = 0
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_colors", "custom_fonts", "custom_icons" ]
 
 [node name="angryDog" type="VBoxContainer" parent="Page2/Page22" index="9"]
 
@@ -508,15 +534,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 208.0
-margin_right = 180.0
-margin_bottom = 220.0
+margin_top = 243.0
+margin_right = 188.0
+margin_bottom = 256.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 alignment = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -526,14 +552,14 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 180.0
+margin_right = 188.0
 margin_bottom = 8.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
 text = "Angry Doggo?"
@@ -550,15 +576,18 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 12.0
-margin_right = 180.0
-margin_bottom = 12.0
+margin_right = 188.0
+margin_bottom = 13.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/grabber_disabled = ExtResource( 11 )
+custom_icons/grabber_highlight = ExtResource( 11 )
+custom_icons/grabber = ExtResource( 11 )
 custom_styles/slider = ExtResource( 4 )
 min_value = 0.0
 max_value = 100.0
@@ -579,15 +608,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 224.0
-margin_right = 180.0
-margin_bottom = 232.0
+margin_top = 260.0
+margin_right = 188.0
+margin_bottom = 273.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.298039, 0.592157, 1 )
 text = "Shower Much?"
@@ -603,15 +632,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 236.0
-margin_right = 180.0
-margin_bottom = 252.0
+margin_top = 277.0
+margin_right = 188.0
+margin_bottom = 309.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 alignment = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
@@ -621,16 +650,20 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 41.0
-margin_bottom = 16.0
+margin_right = 57.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
@@ -643,7 +676,7 @@ group = null
 text = "Nah"
 flat = false
 align = 0
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts", "custom_icons" ]
 
 [node name="CheckBox2" type="CheckBox" parent="Page2/Page22/babiesSelects2" index="1"]
 
@@ -651,17 +684,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 45.0
-margin_right = 87.0
-margin_bottom = 16.0
+margin_left = 61.0
+margin_right = 119.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
@@ -682,17 +719,21 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 91.0
-margin_right = 140.0
-margin_bottom = 16.0
+margin_left = 123.0
+margin_right = 188.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = ExtResource( 10 )
 custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.298039, 0.741176, 1, 1 )
@@ -713,16 +754,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 256.0
-margin_right = 180.0
-margin_bottom = 267.0
+margin_top = 313.0
+margin_right = 188.0
+margin_bottom = 327.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
+size_flags_horizontal = 15
+size_flags_vertical = 15
 custom_styles/hover = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
@@ -829,19 +870,19 @@ size_flags_vertical = 1
 [node name="FindrUI" type="Sprite" parent="Page4" index="0"]
 
 position = Vector2( 90, 160 )
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Matched" type="Node2D" parent="Page4" index="1"]
 
-script = ExtResource( 8 )
+script = ExtResource( 13 )
 
 [node name="Pic" type="Sprite" parent="Page4/Matched" index="0"]
 
 position = Vector2( 90.5675, 135.635 )
 scale = Vector2( 1.0037, 1.0037 )
 z_index = -1
-texture = ExtResource( 9 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="NextPic" type="Sprite" parent="Page4/Matched" index="1"]
@@ -849,7 +890,7 @@ _sections_unfolded = [ "Z Index" ]
 position = Vector2( 90.5675, 135.635 )
 scale = Vector2( 1.0037, 1.0037 )
 z_index = -3
-texture = ExtResource( 9 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Bio" type="RichTextLabel" parent="Page4/Matched" index="2"]
@@ -882,6 +923,15 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 15 )
+volume_db = -25.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 1
+bus = "Distant"
 
 [connection signal="pressed" from="Page1/Page11/NextButton" to="." method="_change_page" binds= [ "Page2" ]]
 

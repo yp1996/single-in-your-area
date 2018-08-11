@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Evangelion_Trimmed.ogg-0db61e637a49ef1524728f54b0bb50ee.oggstr"
+
+[deps]
+
+source_file="res://Audio/Evangelion_Trimmed.ogg"
+dest_files=[ "res://.import/Evangelion_Trimmed.ogg-0db61e637a49ef1524728f54b0bb50ee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
