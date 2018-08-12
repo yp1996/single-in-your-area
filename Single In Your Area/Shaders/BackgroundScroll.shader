@@ -6,8 +6,6 @@ uniform vec4 foregroundColor = vec4(1.0, 1.0, 1.0, 1.0);
 
 void fragment() {
 
-	float sizeX = 2.0;
-	float sizeY = 2.0;
     // Fetch the texture's pixel
     vec4 col = texture(TEXTURE, UV); 
 	

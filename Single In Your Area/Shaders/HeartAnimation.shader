@@ -25,7 +25,7 @@ void fragment() {
 	if (heartCol.a == 0.0) {
 		
 	    // Fetch the texture's pixel
-	    vec4 col = texture(bgTexture, UV); 
+	    vec4 col = texture(bgTexture, FRAGCOORD.xy); 
 		
 		float newX = UV.x + TIME / 20.0;
 		vec4 newCol = texture(bgTexture, vec2(newX, UV.y));
