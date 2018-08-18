@@ -80,7 +80,7 @@ shader = ExtResource( 15 )
 render_priority = 0
 shader = ExtResource( 18 )
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
