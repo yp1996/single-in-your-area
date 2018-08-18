@@ -23,8 +23,9 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mall-wall3/StaticBody2D" index="0"]
 
+z_index = 1
 build_mode = 0
-polygon = PoolVector2Array( 32, 32, 64, 16, 64, 48, 32, 64, 0, 48, 0, 16, 32, 32 )
+polygon = PoolVector2Array( 32.2005, 33.3866, 62.7241, 15.6754, 64, 48, 32, 64, 0, 48, 1.67686, 15.6754, 32.2005, 33.3866 )
 _sections_unfolded = [ "Material", "Visibility", "Z Index" ]
 
 [node name="mall-floor" type="Sprite" parent="." index="1"]

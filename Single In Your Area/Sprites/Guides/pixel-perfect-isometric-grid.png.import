@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mall-wall.png-d8f4d63bcc8919dd4664db2e83923198.stex"
+path="res://.import/pixel-perfect-isometric-grid.png-c8855edcc6c4dcb196834e93dc030160.stex"
 
 [deps]
 
-source_file="res://Sprites/tiles/mall-wall.png"
-source_md5="fe8ab7383d7a7d15a2f136faa211fd76"
+source_file="res://Sprites/Guides/pixel-perfect-isometric-grid.png"
+source_md5="9fbd98a06b4bdefe5dbf71730e609fca"
 
-dest_files=[ "res://.import/mall-wall.png-d8f4d63bcc8919dd4664db2e83923198.stex" ]
-dest_md5="bd1534bd696a962fd4476affb755bdee"
+dest_files=[ "res://.import/pixel-perfect-isometric-grid.png-c8855edcc6c4dcb196834e93dc030160.stex" ]
+dest_md5="e864c532cb447a2ec1efe11e42d8bffd"
 
 [params]
 

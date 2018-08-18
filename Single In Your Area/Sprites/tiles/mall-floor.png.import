@@ -7,10 +7,10 @@ path="res://.import/mall-floor.png-994231d9b41e103dfcf1a6493406497e.stex"
 [deps]
 
 source_file="res://Sprites/tiles/mall-floor.png"
-source_md5="c591666c2ce8a0d44d9c196fe7f10e8c"
+source_md5="57bcbb9ec603a59de2850231c04b039a"
 
 dest_files=[ "res://.import/mall-floor.png-994231d9b41e103dfcf1a6493406497e.stex" ]
-dest_md5="a0ccd2d878deda95c08af986ab69e223"
+dest_md5="e97d6da3805e5cf28297caa6df3edc4f"
 
 [params]
 

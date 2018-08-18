@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mall-wall.png-d8f4d63bcc8919dd4664db2e83923198.stex"
+path="res://.import/WC-sprite.png-638268f1bc34dbf92a8e0e826217982c.stex"
 
 [deps]
 
-source_file="res://Sprites/tiles/mall-wall.png"
-source_md5="fe8ab7383d7a7d15a2f136faa211fd76"
+source_file="res://Sprites/WC-sprite.png"
+source_md5="d59801501aff92240ab65f05a3d4c9ec"
 
-dest_files=[ "res://.import/mall-wall.png-d8f4d63bcc8919dd4664db2e83923198.stex" ]
-dest_md5="bd1534bd696a962fd4476affb755bdee"
+dest_files=[ "res://.import/WC-sprite.png-638268f1bc34dbf92a8e0e826217982c.stex" ]
+dest_md5="844d833ce48e93dc702ef86ef4678e62"
 
 [params]
 
