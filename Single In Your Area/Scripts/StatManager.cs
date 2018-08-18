@@ -22,8 +22,14 @@ public class StatManager : Node
 
     public override void _Ready()
     {
-        Stat anxiety = new Stat("anxiety", 0, 100, 50);
-		stats.Add("anxiety", anxiety);   
+		if (Global.debugMode){
+            Stat anxiety = new Stat("anxiety", 0, 9999999, -9999999);
+            stats.Add("anxiety", anxiety);
+        }
+		else{
+        	Stat anxiety = new Stat("anxiety", 0, 100, 50);
+			stats.Add("anxiety", anxiety);   
+		}
 		
 	    Stat health = new Stat("health", 0, 100, 100);
 		stats.Add("health", health);

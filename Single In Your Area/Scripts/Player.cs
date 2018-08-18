@@ -25,9 +25,9 @@ public class Player : KinematicBody2D
 	Vector2 defaultPosition = new Vector2(470,270);
 	StatManager statManager;
 
+	
     public override void _Ready()
     {
-        GD.Print("HELLO THERE");
         // Called every time the node is added to the scene.
         // Initialization here
         navPt = (NavPoint)GetNode("../navpoint_container");

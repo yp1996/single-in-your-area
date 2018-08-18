@@ -80,7 +80,7 @@ shader = ExtResource( 15 )
 render_priority = 0
 shader = ExtResource( 18 )
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
@@ -91,6 +91,7 @@ _sections_unfolded = [ "Sort", "Transform", "Z Index" ]
 
 [node name="navpoint_container" type="Node2D" parent="YSort" index="0"]
 
+editor/display_folded = true
 z_index = 6
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
@@ -137,10 +138,11 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -131059, 2, 0, -65523, 2, 0, 13, 2, 0, 18, 6, 0, 65549, 2, 0, 65553, 1, 0, 65554, 2, 0, 131085, 2, 0, 131089, 1, 0, 131090, 2, 0, 196621, 2, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0 )
 script = ExtResource( 7 )
-_sections_unfolded = [ "Cell", "Material", "Transform", "Z Index" ]
+_sections_unfolded = [ "Cell", "Collision", "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="Collectibles" type="Node2D" parent="YSort" index="3"]
 
+editor/display_folded = true
 script = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
