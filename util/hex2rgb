@@ -1,0 +1,24 @@
+#! /usr/bin/python
+
+import sys
+
+"""
+I'm too lazy to do the math here lmao
+converts a 2 digit hex code into a 256 rgb value from 0-1 
+e.g. FF -> 1.0
+"""
+
+def mag(val):
+	return val/float(255)
+
+def main():
+	if not (len(sys.argv) == 2):
+		print "I need a 2 digit hex code :) (e.g. FF)"
+		return None
+	else:
+		if not (len(str(sys.argv[1])) == 2):
+			print "oh no!!!! "+str(sys.argv[1])+" looks like a hex code larger than 2 digits. SHUTTING DOWN."
+			return None
+		print(mag(int(sys.argv[1],16)))
+
+main()

@@ -17,10 +17,11 @@
 [ext_resource path="res://Shaders/RandomNoise.shader" type="Shader" id=15]
 [ext_resource path="res://Sprites/FX/noise.png" type="Texture" id=16]
 [ext_resource path="res://Scenes/Chat/ChatMain.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Shaders/BackgroundScroll.shader" type="Shader" id=18]
+[ext_resource path="res://Sprites/BackgroundScroll.shader" type="Shader" id=18]
 [ext_resource path="res://Sprites/UI/BG.png" type="Texture" id=19]
 [ext_resource path="res://Audio/Blank Banshee - MEGA - 10 Hungry Ghost.wav" type="AudioStream" id=20]
 [ext_resource path="res://Scripts/ModulateMusic.cs" type="Script" id=21]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 
