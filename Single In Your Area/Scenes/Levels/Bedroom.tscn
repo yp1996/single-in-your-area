@@ -83,7 +83,7 @@ shader_param/baseColor = null
 shader_param/colChange = null
 shader_param/foregroundColor = null
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 

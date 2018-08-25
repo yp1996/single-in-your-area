@@ -165,7 +165,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 130 ), Vector2( 0, 160 ) ]
 }
 
-[node name="MainMenu" type="MarginContainer" index="0"]
+[node name="MainMenu" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
